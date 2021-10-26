@@ -1,0 +1,3 @@
++) Xem các video nhập môn + topic 1, session 1 trên file syllabus.
++) Tìm hiểu chương 1: Linux và các khái niệm cơ bản, khoá học Linux System Programming và chương 1: Giới thiệu Linux Kernel, khoá học Linux Kernel Basic trên trang web Vimentor.
++) Tìm hiểu về cách lập trình C trên Linux, thư viện liên kết tĩnh, thư viện liên kết động (có minh hoạ bằng code).

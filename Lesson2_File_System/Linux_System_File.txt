@@ -1,0 +1,22 @@
+================================================================================================
+Chương này mô tả các phần quan trọng của cây thư mục trong Linux , dựa trên Tiêu chuẩn phân cấp cây thư mục - FileSystem Hierachy Standard - FHS.
+================================================================================================
+
+				  ============FHS============
++) FHS cố gắng đưa ra một tiêu chuẩn về việc tổ chức các thư mục trong Linux.
++) Việc đưa ra một chuẩn thế này có cái lợi của nó, đó là các phần mềm có thể dễ dàng đuợc viết và chạy trên hầu hết các bản phân phối khác nhau, và việc quản trị hệ thống cũng dễ dàng hơn vì mọi thứ đều đựoc đặt ở chỗ đã đuợc quy định trong tiêu chuẩn.
++) FHS kết hợp giữa UNIX truyền thống và các xu hướng hiện đại, khiến cho các hệ thống Linux trở nên dễ dàng và thân quen với những người đã có kinh nghiệm với Unix và nguợc lại.
+
+================================================================================================
+
+                                  ========Cây thư mục=========
++) Cây thư mục đuợc chia nhỏ thành nhiều phần khác nhau, mỗi phần có thể ở trên một đĩa riêng, hoặc nằm trên một phân vùng riêng nhằm thích nghi với sự hạn chế của dung lượng đĩa cũng như cho phép các thao tác quản trị và sao lưu dễ dàng hơn. 
++) Các phần quan trọng bao gồm root ("/"), /var, /usr, home, mỗi phần lại có một mục đích riêng của nó. 
++) Cây thư mục đuợc thiết kế để sao cho chúng có thể họat động tốt trong một mạng lưới các máy Linux, từ đó bạn có thể chia sẻ một vài phần của các hệ thống tệp tin qua một thiết bị read-only như đĩa CD hoặc qua mạng TCP/IP với Network FileSystem.
+
++ root filesystem đuợc chỉ định riêng cho mỗi máy (nó thường đuợc lưu trữ ở một đĩa cục bộ, mặc dù cũng có thể là RAMdisk hoặc ổ đĩa mạng). Nó chứa các file cần thiết cho quá trình khởi động hệ thống, và các chương trình giúp biến chính nó thành một nơi mà các filesystem khác có thể đuợc mount vào. Nội dung của root filesystem thường đủ dùng khi hệ thống đang ở single user mode. Nó cũng chứa các công cụ giúp sửa chữa các hệ thống hỏng, sao lưu và khôi phục các file bị mất.
++ /usr chứa tất cả các lệnh, các thư viện, các manual, và các file dữ liệu bất biến cần thiết cho hoạt động bình thường của hệ thống. Không một file nào trong /usr đuợc chỉ định cho một máy cụ thể , và theo quy ước trong FHS thì cũng không một ai đuợc thay đổi nội dung của thư mục này. Điều này cho phép /usr có thể đuợc chia sẻ qua mạng, sẽ giúp tiết kiệm không gian trên đĩa cục bộ bởi vì dung lượng của thư mục này đôi khi lên tới hàng trăm Megabytes, có khi lên tới vài Gigabytes. Việc chia sẻ /usr qua mạng cũng khiến cho người quản trị dễ thở hơn bởi vì chỉ cần /usr trên máy chủ thay đổi là mọi client cũng đuợc cập nhật theo, người quản trị sẽ không phải tiến hành thao tác cập nhật trên từng máy đơn lẻ. Thậm chí nếu /usr nằm trên đĩa cục bộ, nó cũng có thể đuợc mount dưới dạng một filesystem chỉ đọc (readonly) , làm giảm khả năng khiến cho hệ thống bị crash hoặc nội dung của /usr bị "vấy bẩn".
++ /var chứa các dữ liệu khả biến (có thể thay đổi đuợc), kiểu như các dịch vụ mang tính tuần hoàn, cuốn chiếu như mails, tin tức, mays in,... hoặc các log files, các trang manual đã đuợc định dạng, và các file tạm thời. Trước đây mọi thứ trong /var đều nằm trong /usr/var , nhưng như vậy làm mất đi tính bất biến của /usr nên các dữ liệu khả biến đã đuợc tách thành một filesystem ngang hàng với /usr.
++ /home lại chứa các thông tin của những người dùng trong cùng hệ thống, ví dụ: tất cả các thông tin thực tế như profile chẳng hạn. Việc chia độc lập thư mục home ra khỏi cây thư mục khiến cho việc sao lưu dễ dàng hơn. Bởi vì nhiều phần khác ngoài home không cần phải đuợc sao lưu hoặc ít nhất là dữ liệu của chúng rất hiếm khi bị thay đổi. Một thư mục home lớn có thể tiếp tục đuợc chia nhỏ tùy vào các hệ thống hiện hành , thường các phần con của /home sẽ mang một tên có ý nghĩa nào đó như tên user chẳng hạn. Ví dụ :/home/students,...
+
+https://kipalog.com/posts/Series----Linux-System-Administrator-s-guide---Phan-2

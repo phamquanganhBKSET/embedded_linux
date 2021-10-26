@@ -1,0 +1,8 @@
++) Xem lại về lập trình với gcc, thư viện liên kết tĩnh, động ở bài trước (đọc bài viết phần note kiến thức + Google + dùng explainshell để tìm hiểu lệnh).
++) Xem các video phần tài liệu tham khảo topic 2, session 1.
++) Tìm hiểu về file system của Linux: Các lệnh thao tác với file; các thư mục nằm trong root; khái niệm inode; các quyền truy cập file và người sở hữu file (tham khảo chương 3 sách [3] trong syllabus, [Series] - Linux System Administrator's guide. [Phần 2] (kipalog.com), ....).
++) Tìm hiểu chương file Input/Ouput khoá học Linux System Programming Vimentor.
+
+Bài tập:
+1. Tự tạo 1 file text và đọc nó từ 1 vị trí bất kỳ (lập trình C).
+2. Viết chương trình in ra thông tin các file (tên file, kích thước, quyền truy cập,...) trong 1 folder với đường dẫn có thể được fix cứng trong source code (triển khai lại lệnh ls bằng C).
