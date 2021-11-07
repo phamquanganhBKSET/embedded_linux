@@ -9,7 +9,7 @@
 #include <time.h>
 #include <errno.h>
 
-#define path_dir "/home/phamquanganh/data/embedded_linux/."
+#define path_dir "/home/pham/embedded_linux/."
 
 int main() {
 	DIR *dir;

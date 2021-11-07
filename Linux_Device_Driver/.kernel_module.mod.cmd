@@ -1,0 +1,1 @@
+cmd_/home/pham/embedded_linux/Linux_Device_Driver/kernel_module.mod := { echo  /home/pham/embedded_linux/Linux_Device_Driver/kernel_module.o;  echo; } > /home/pham/embedded_linux/Linux_Device_Driver/kernel_module.mod

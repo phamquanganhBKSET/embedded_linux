@@ -1,0 +1,1 @@
+cmd_/home/pham/embedded_linux/Linux_Device_Driver/modules.order := {   echo /home/pham/embedded_linux/Linux_Device_Driver/kernel_module.ko; :; } | awk '!x[$$0]++' - > /home/pham/embedded_linux/Linux_Device_Driver/modules.order

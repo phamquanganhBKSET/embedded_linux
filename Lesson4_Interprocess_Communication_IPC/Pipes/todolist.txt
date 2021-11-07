@@ -1,0 +1,3 @@
++) https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_pipes.htm
++) https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_named_pipes.htm
++) Chương 13 sách Beginning Linux Programming

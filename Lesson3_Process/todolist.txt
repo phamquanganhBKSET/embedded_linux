@@ -1,0 +1,9 @@
++ Xem video Môi trường xung quanh Process (https://www.youtube.com/watch?v=JYlgtSVCdoE).
+ 
++ Phần Program Arguments và Environment Variables chương 4 sách [3] trong syllabus (Beginning Linux Programming). Ứng dụng viết một chương trình xử lý tham số đầu vào cho câu lệnh ls. Ví dụ nếu nhập "my_ls -l" sẽ in ra thông tin chi tiết các file, nếu truyền -a sẽ in cả các file ẩn, nếu truyền -la sẽ in ra tất cả thông tin trên (tham khảo: Implementation of ls-a,-l,-r,-R commands in Linux (programmer.help)) -> my_ls.c.
+
++ Viết chương trình implement lệnh cp, có sử dụng 1 số option và truyền vào đường dẫn của các file cần thực hiện -> implement_cp.c.
+
++ Viết 1 chương trình C fork ra cha và con, trong process cha in ra pid và "I am parent", trong process con làm tương tự. So sánh PID in ra và PID sử dụng lệnh ps. Thử mở 1 file trước khi fork, sau đó cả cha và con cùng ghi vào file fd trước đó và check kết quả xem sau khi kết thúc chương trình nội dung file là gì. Tương tự như vậy, thử với biến thông thường và xem kết quả -> parent_process.c.
+
++ Viết chương trình để tạo ra 1 zombie process (lấy pid của tiến trình đó sau đó check lại bằng lệnh ps trên terminal hoặc system call system() trong code để show ra zombie process vừa tạo), kiểm tra khi tiến trình cha terminate thì các tiến trình con của nó nhận tiến trình nào làm tiến trình cha ->zombie_process.c.
