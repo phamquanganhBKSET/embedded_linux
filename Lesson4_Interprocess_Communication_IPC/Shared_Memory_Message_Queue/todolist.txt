@@ -1,2 +1,7 @@
++) Shared Memory:
 https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_shared_memory.htm
+https://www.geeksforgeeks.org/ipc-shared-memory/
+
++) Message Queue:
+https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_message_queues.htm
 
