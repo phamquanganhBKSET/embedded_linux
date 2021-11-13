@@ -1,0 +1,8 @@
+Documenations:
+https://www.tutorialspoint.com/inter_process_communication/inter_process_communication_signals.htm
+https://www.geeksforgeeks.org/chat-application-between-two-processes-using-signals-and-shared-memory/
+http://www.cs.umsl.edu/~sanjiv/classes/cs2750/lectures/signals.pdf
+
+Video:
+https://www.youtube.com/watch?v=iaDFHjP3LnA
+https://www.youtube.com/watch?v=ViWv0t8U_-8

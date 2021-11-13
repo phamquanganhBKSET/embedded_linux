@@ -21,6 +21,7 @@ shmctl() is used. shmctl(int shmid,IPC_RMID,NULL);
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
+#include <signal.h>
 #include <string.h>
 #include <errno.h>
 #include <stdlib.h>
@@ -28,11 +29,17 @@ shmctl() is used. shmctl(int shmid,IPC_RMID,NULL);
 
 #define BUF_SIZE 1024
 
+struct memory
+{
+	char buf[BUF_SIZE];
+	pid_t pid_rd;
+};
+
 int main(int argc, char* argv[])
 {
 	key_t SHM_KEY = ftok("shmfile", 65);
 	int shmid;
-	char* bufptr;
+	struct memory* shmptr;
 	char endstr[5] = "end";
 	int end;
 	shmid = shmget(SHM_KEY, 1024, 0666|IPC_CREAT);
@@ -45,22 +52,26 @@ int main(int argc, char* argv[])
 	//Attach to shared memory
 	//void* shmat(int shmid, void* shmaddr, int shmflg);
 	//if shmaddr is NULL, the OS will automatically choose the address
-	bufptr = (char*) shmat(shmid, NULL, 0);
+
+	shmptr = shmat(shmid, NULL, 0);
 
 	//Transfer blocks of data from buffer to shared memory
 	while(1)
 	{
+		//Send signal to receiver
 		printf("\n+) Let's write data: ");
-		fgets(bufptr, BUF_SIZE, stdin);
-		bufptr[strlen(bufptr)-1]='\0';
+        	fgets(shmptr->buf, BUF_SIZE, stdin);
+        	shmptr->buf[strlen(shmptr->buf)-1]='\0';
 
-		printf("+) Wrote string \"%s\" - %lu bytes\n", bufptr, strlen(bufptr));
+        	printf("+) Wrote string \"%s\" - %lu bytes\n", shmptr->buf, strlen(shmptr->buf));
 
-		end = strcmp(bufptr, endstr);
+		kill(shmptr->pid_rd, SIGUSR1);
+
+		end = strcmp(shmptr->buf, endstr);
 		if(end == 0)
 		{
 			//Detach from shared memory
-			if(shmdt(bufptr) == -1)
+			if(shmdt(shmptr) == -1)
 			{
 				perror("shmdt");
 				return 1;

@@ -1,14 +1,29 @@
 #include <stdio.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
+#include <signal.h>
 #include <sys/types.h>
 #include <string.h>
 #include <errno.h>
 #include <stdlib.h>
 
+#define BUF_SIZE 1024
+
+struct memory
+{
+        char buf[BUF_SIZE];
+        pid_t pid_rd;
+};
+
+struct memory* shmptr;
+
+void handler(int signum)
+{
+	printf("Received \"%s\" - %ld bytes\n", shmptr->buf, strlen(shmptr->buf));
+}
+
 int main(int argc, char* argv[])
 {
-	char* str;
 	char endstr[4] = "end";
 	int end;
 
@@ -24,16 +39,17 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 
-	str = (char*) shmat(shmid, NULL, 0);
+	shmptr = shmat(shmid, NULL, 0);
+	shmptr->pid_rd = getpid();
 
 	while(1)
 	{
-		printf("Received \"%s\" - %ld bytes\n", str, strlen(str));
-		end = strcmp(str, endstr);
+		signal(SIGUSR1, handler);
+		end = strcmp(shmptr->buf, endstr);
 		if (end == 0)
 		{
 			//Detach from shared memory
-                        if(shmdt(str) == -1)
+                        if(shmdt(shmptr) == -1)
                         {
                                 perror("shmdt");
                                 return 1;
