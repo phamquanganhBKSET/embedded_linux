@@ -6,7 +6,7 @@ int main()
 	int i;
 	char* a = (char*) calloc(100, sizeof(char));
 	printf("Nhap chuoi: ");
-	gets(a);
+	fgets(a, 100, stdin);
 	char* copy = Copy(a);
 	int* freq = (int*) calloc(strlen(copy), sizeof(int));
         freq = Freq(a);

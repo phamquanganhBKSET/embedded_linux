@@ -1,15 +1,17 @@
-all: main.o
-	LD_LIBRARY_PATH=.:
-	export LD_LIBRARY_PATH
-	ldd main
+all: main
 	chmod +x main
 	./main
+	sudo rm -r /usr/lib/libfreq.so
 
-main.o: main.c freq.o libfreq.so
+main: libfreq.so
+	sudo cp libfreq.so /usr/lib
 	gcc main.c -o main -L. -lfreq
 
 libfreq.so: freq.o
-	gcc -shared freq.o -o libfreq.so
+	gcc freq.o -shared -o libfreq.so
 
-freq.o: freq.c freq.h
-	gcc -c -fpic freq.c
+freq.o:
+	gcc -c freq.c -fpic
+
+clean:
+	rm -r freq.o libfreq.so main

@@ -24,7 +24,6 @@ int main() {
 	// System call read() được tạo ra để đọc bất kỳ loại dữ liệu như text, binary hay struct ở dạng binary từ bất kỳ file fd nào như regular file, socket, pipe
 	// Nếu muốn đọc dữ liệu vào một string, read() sẽ không tự động thêm ký tự \null vào cuối buffer để tạo thành string hoàn chỉnh
 
-	int i = 0, j = 0, k = 0;
 	struct stat status; //stat structure
 	size_t bytes;
 	char* buffer;

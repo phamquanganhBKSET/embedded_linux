@@ -1,1 +1,0 @@
-cmd_/home/pham/embedded_linux/Linux_Device_Driver/kernel_module.ko := ld -r -m elf_x86_64  -z max-page-size=0x200000  --build-id=sha1  -T ./scripts/module-common.lds -o /home/pham/embedded_linux/Linux_Device_Driver/kernel_module.ko /home/pham/embedded_linux/Linux_Device_Driver/kernel_module.o /home/pham/embedded_linux/Linux_Device_Driver/kernel_module.mod.o;  true

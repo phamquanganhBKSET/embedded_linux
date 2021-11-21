@@ -1,0 +1,14 @@
++) Explain how the pointer is used in system calls: https://stackoverflow.com/questions/21411113/what-does-void-routinevoid-mean-in-c
+
++) Thread and POSIX thread: https://vimentor.com/vi/lesson/gioi-thieu-ve-thread
+
++) Manage POSIX thread: https://vimentor.com/vi/lesson/quan-ly-posix-thread-1
+
++) Thread Synchronization-Mutex: https://vimentor.com/vi/lesson/thread-synchronization
+
++) Thread Synchronization-Conditional parameter: https://vimentor.com/vi/lesson/thread-synchronization-bien-dieu-kien
+
++) Thread Cancellation: https://vimentor.com/vi/lesson/thread-cancellation
+
++) Bài tập: Viết chương trình tính tích ma trận sử dụng multi-thread.
+
