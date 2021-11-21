@@ -1,0 +1,1674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0092)https://www.microsemi.com/product-directory/fpgas-socs-training/4339-fpga-training-tutorials -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr" slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" async="" src="./Tutorials _ Microsemi_files/munchkin.js"></script>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+          
+  <meta name="rights" content="Microsemi Corporation">
+  <meta name="description" content="The FPGA and SoC tutorial provide information on product overview, userguides and quick start guide for all the products.">
+  
+  <title>Tutorials | Microsemi</title>
+  <link href="https://www.microsemi.com/templates/je-construct-community/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/style.css" type="text/css">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/jquery-ui.css" type="text/css">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/mps-styles.css" type="text/css">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/style(1).css" type="text/css">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/screen.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/print.css" type="text/css" media="print">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/micro-sites.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/custom_stylesheet_13.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/style(2).css" type="text/css">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/style(3).css" type="text/css">
+  <link rel="stylesheet" href="./Tutorials _ Microsemi_files/style2.0.css" type="text/css">
+  <style type="text/css">
+/* START: Tabber styles */ div.tabber_nav { padding: 0 15px; } div.tabber_container.rounded div.tabber_nav li.tabber_tab a, div.tabber_container.rounded div.tabber_nav li.tabber_tab a:hover { -webkit-border-radius: 15px 15px 0 0; -moz-border-radius: 15px 15px 0 0; border-radius: 15px 15px 0 0; } div.tabber_container.rounded div.tabber_content  { -webkit-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px; } div.tabber_nav li.tabber_tab a, div.tabber_nav li.tabber_tab a:hover, div.tabber_content { border-color: #CCCCCC; } /* END: Tabber styles */
+  #body-container, #supra {width:960px}
+  </style>
+  <script async="" type="text/javascript" src="./Tutorials _ Microsemi_files/rtp.js"></script><script async="" src="./Tutorials _ Microsemi_files/analytics.js"></script><script type="text/javascript" async="" src="./Tutorials _ Microsemi_files/analytics.js"></script><script type="text/javascript" async="" src="./Tutorials _ Microsemi_files/f.txt"></script><script async="" src="./Tutorials _ Microsemi_files/gtm.js"></script><script src="./Tutorials _ Microsemi_files/jquery-1.7.0.min.js" type="text/javascript"></script>
+  <script src="./Tutorials _ Microsemi_files/docs.js" type="text/javascript"></script>
+  <script src="./Tutorials _ Microsemi_files/mootools-core.js" type="text/javascript"></script>
+  <script src="./Tutorials _ Microsemi_files/core.js" type="text/javascript"></script>
+  <script src="./Tutorials _ Microsemi_files/mootools-more.js" type="text/javascript"></script>
+  <script src="./Tutorials _ Microsemi_files/script.js" type="text/javascript"></script>
+  <script src="./Tutorials _ Microsemi_files/jquery-latest.js" type="text/javascript"></script>
+  <script src="./Tutorials _ Microsemi_files/jquery.simplemodal.js" type="text/javascript"></script>
+  <script src="./Tutorials _ Microsemi_files/default.js" type="text/javascript"></script>
+  <script type="text/javascript">
+var catID = 4339;
+/* START: Tabber scripts */ var tabber_mode = 'click'; var tabber_slide_speed = 500; var tabber_fade_in_speed = 500; var tabber_scroll = 0; var tabber_tablinkscroll = 1; var tabber_url = ''; var tabber_urlscroll = ''; var tabber_use_cookies = 0; var tabber_set_cookies = 0; var tabber_cookie_name = 'tabber_fb5808476bec1d5a85eb1687fe4767f1'; var tabber_use_hash = 1; /* END: Tabber scripts */
+  </script>
+  <script type="text/javascript">
+    (function() {
+      var strings = {"REQUIRED_FILL_ALL":"Please enter data in all fields.","E_LOGIN_AUTHENTICATE":"Username and password do not match or you do not have an account yet.","REQUIRED_NAME":"Please enter your name!","REQUIRED_USERNAME":"Please enter your username!","REQUIRED_PASSWORD":"Please enter your password!","REQUIRED_VERIFY_PASSWORD":"Please re-enter your password!","PASSWORD_NOT_MATCH":"Password does not match the verify password!","REQUIRED_EMAIL":"Please enter your email!","EMAIL_INVALID":"Please enter a valid email!","REQUIRED_VERIFY_EMAIL":"Please re-enter your email!","EMAIL_NOT_MATCH":"Email does not match the verify email!","CAPTCHA_REQUIRED":"Please enter captcha key"};
+      if (typeof Joomla == 'undefined') {
+        Joomla = {};
+        Joomla.JText = strings;
+      }
+      else {
+        Joomla.JText.load(strings);
+      }
+    })();
+  </script>
+  <script src="./Tutorials _ Microsemi_files/pmcdocconnect.js" type="text/javascript"></script>
+  <meta name="copyright" content="Microsemi">
+  <meta name="dbg_base" content="https://www.microsemi.com/">
+  <script type="text/javascript">window.addEvent('domready',function(){new SmoothScroll({duration:1200},window);});</script>
+  <!--[if !IE 9]>
+  <style type="text/css">.drop-shadow, .outline, .rounded, ul.menu li,a, {behavior:url("https://www.microsemi.com/templates/je-construct-community/js/PIE.htc")}</style>
+  <![endif]-->
+  <!--[if lt IE 7]>
+  <link rel="stylesheet" href="/templates/je-construct-community/css/ie6.css" type="text/css" media="screen" />
+  <style type="text/css">
+  body {text-align:center}
+  #body-container {text-align:left}
+  #body-container, #supra {width: expression( document.body.clientWidth >959 ? "960px" : "auto" );margin:0 auto}
+  </style>
+  <script type="text/javascript" src="/templates/je-construct-community/js/DD_belatedPNG_0.0.8a-min.js"></script>
+  <script>DD_belatedPNG.fix('h1,a,img,ul,li,.slide-holder img, .slide-holder a img');</script>
+  <![endif]-->
+
+        <script>
+            jQuery(document).ready(function () {
+                jQuery('a.doclink').attr('target', '_blank');
+            });
+        </script>
+        <!-- loading font awesome -->
+        <link rel="stylesheet" href="./Tutorials _ Microsemi_files/font-awesome.min.css">
+		<link rel="stylesheet" href="./Tutorials _ Microsemi_files/cookiepopup.css">
+        <style type="text/css">
+			  /* cookie tracking fo eu style */
+
+			#cookie-eu {
+				background:#F5F8FA;
+				width:930px;
+				margin:0 auto;
+				display:none;
+			}
+			#cookie-eu p {
+				 padding:5px;
+				 color:#808080;
+				 font-size:14px !important;
+				 font-weight:normal !important;
+				 line-height: 20px;
+			}
+			/* proper sizing for heading */
+			.tabber_container h2 {
+				font-size:22px !important;
+			}
+			.tabber_container h3 {
+				font-size:19px !important;
+			}
+			.tabber_container h4 {
+				font-size:17px !important;
+			}
+			.tabber_container h5 {
+				font-size:15px !important;
+			}
+			/* Marketo subscrbtion" */
+			#subscribe-to-newsletter {
+				width:250px;
+				position:fixed;
+				right:15px;
+				bottom:0px;
+				border-top:1px solid #6f2d78;
+				border-left:1px solid #6f2d78;
+				border-right:1px solid #6f2d78;
+				background:white;
+			}
+			#subscribe-to-newsletter h3 {
+				background:#6f2d78;
+				text-align:center;
+				color:white;
+				height:25px;
+				line-height:25px;
+				font-family:sans-serif;
+				font-size:16px !important;
+				font-weight:normal !important;
+				cursor:pointer;
+				padding:0 !important;
+				margin:0 !important;
+			}
+			#newsletter-fly-out {
+				display:none;
+				height:250px;
+				margin-top:5px;
+			}
+			#toggle-icon {
+				padding-left:115px;
+			}
+			/* Style for video modal*/
+			img[id^="youtubeThumbnail"], img[id^="youkuThumbnail"] {
+			    cursor: pointer;
+			    transition: 0.3s;
+			}
+			
+			img[id^="youtubeThumbnail"]:hover, img[id^="youkuThumbnail"]:hover {
+			    opacity: 0.7;
+			}
+			
+			/* The Modal (background) */
+			div[id^="youtubeModal"], div[id^="youkuModal"] {
+			    display: none; /* Hidden by default */
+			    position: fixed; /* Stay in place */
+			    z-index: 100000; /* Sit on top */
+			    left: 0;
+			    top: 0;
+			    width: 100%; /* Full width */
+			    height: 100%; /* Full height */
+			    overflow: auto; /* Enable scroll if needed */
+			    background-color: rgb(0, 0, 0); /* Fallback color */
+			    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+			}
+			
+			/* Modal Content (Image) */
+			.youtubeIframe, .youkuIframe {
+			    display: block;
+			    width: 600px;
+			    height: 400px;
+			}
+			
+			/* Add Animation - Zoom in the Modal */
+			.youtubeIframe, .youkuIframe {
+			    -webkit-animation-name: zoom;
+			    -webkit-animation-duration: 0.3s;
+			    animation-name: zoom;
+			    animation-duration: 0.3s;
+			}
+			#video-frame {
+				width:600px;
+				height:400px;
+				position: absolute;
+				top:50%;
+				left:50%;
+				margin:-200px;
+				margin-left:-300px;
+				
+			}
+			
+			@-webkit-keyframes zoom {
+			    from {
+			        -webkit-transform: scale(0)
+			    }
+			    to {
+			        -webkit-transform: scale(1)
+			    }
+			}
+			
+			@keyframes zoom {
+			    from {
+			        transform: scale(0)
+			    }
+			    to {
+			        transform: scale(1)
+			    }
+			}
+			
+			/* The Close Button */
+			span[id^="youtubeClose"], span[id^="youkuClose"] {
+			    color: #f1f1f1;
+			    font-size: 40px;
+			    font-weight: bold;
+			    margin-left:600px;
+			}
+			
+			span[id^="youtubeClose"]:hover,
+			span[id^="youtubeClose"]:focus,
+			span[id^="youkuClose"]:hover,
+			span[id^="youkuClose"]:focus {
+			    color: #bbb;
+			    text-decoration: none;
+			    cursor: pointer;
+			}
+			
+			/* 100% Image Width on Smaller Screens */
+			@media only screen and (max-width: 700px) {
+			    .modal-content {
+			        width: 100%;
+			    }
+			}
+			/* Buy button */
+			.btn-buy {
+				font-family:sans-serif;
+				background:#339bd5;
+				color:white !important;
+				padding:7px 8px 7px 45px;
+				border-radius:4px;
+				text-decoration:none;
+				text-transform: uppercase;
+				/*text-shadow:0px 1px 0px rgba(0,0,0,0.5);*/
+				/*box-shadow:0px 1px 0px rgba(0,0,0,0.5);*/
+				position:relative;
+			}
+			.btn-buy:hover {
+				text-decoration:none !important;
+			}
+			.btn-buy i {
+				padding-right:5px;
+				background:#1e3e6d;
+				display:inline-block;
+				position:absolute;
+				left:0;
+				top:0;
+				bottom:0;
+				line-height:32px;
+				width:35px;
+				text-align:center;
+				border-radius:4px 0 0 4px;
+			}
+			.listed-action-items {
+				list-style-type: none !important;
+				
+			}
+			.listed-action-items li {
+				margin: 5px 0 5px 0 !important;
+			}
+			.listed-action-items li.last {
+				margin-top: 20px !important;
+			}
+			/* PDF Icon */
+			.pdf img, .icon-lock {
+				display:none;
+			}
+			/* Table sorter */
+			table.tablesorter .even {
+				background-color: #F5F8FA;
+			}
+			table.tablesorter .odd {
+				background-color: #FFFFFF;
+			}
+			table.tablesorter .header:after {
+			    font-family: 'FontAwesome';
+				content: "\f0dc";
+				color:white;
+				float:right;
+			}
+			table.tablesorter .headerSortUp:after {
+			    font-family: 'FontAwesome';
+				content: "\f0de";
+				color:white;
+				float:right;
+			}
+			table.tablesorter .headerSortDown:after {
+				font-family: 'FontAwesome';
+				content: "\f0dd";
+				color:white;
+				float:right;
+			}
+			.tabber_content h3 {
+				font-size: 1.3em !important;
+				font-weight: 600 !important;
+			}
+		  </style>
+		  <!-- Cross-Domain AJAX for IE8 and IE9 -->
+		  <script language="JavaScript" src="./Tutorials _ Microsemi_files/jquery.xdomainrequest.min.js" type="text/javascript"></script>
+		  <!-- loading geoplugin api -->
+		  <script language="JavaScript" src="./Tutorials _ Microsemi_files/javascript.gp" type="text/javascript"></script>
+		  <!-- loading table sorter plugin -->
+		  <script language="JavaScript" src="./Tutorials _ Microsemi_files/jquery.tablesorter.min.js" type="text/javascript"></script>
+		  <script language="JavaScript" src="./Tutorials _ Microsemi_files/jquery.metadata.js" type="text/javascript"></script>
+		  <script language="JavaScript" src="./Tutorials _ Microsemi_files/cookie-popup.js" type="text/javascript"></script>
+		    <!-- table sorter -->
+			<script type="text/javascript">
+			jQuery(document).ready(function(){
+				jQuery("#extranetDocsTable").tablesorter({sortList: [[3,0]], widgets: ["zebra"]}); 
+			});
+			</script>
+    <script src="./Tutorials _ Microsemi_files/f(1).txt"></script><script type="text/javascript" async="" src="./Tutorials _ Microsemi_files/munchkin(1).js"></script><script async="" src="./Tutorials _ Microsemi_files/hotjar-1025829.js"></script><style type="text/css">.backpack.dropzone {
+  font-family: 'SF UI Display', 'Segoe UI';
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+  font-weight: lighter;
+  color: white;
+  will-change: right;
+  z-index: 2147483647;
+  bottom: 20%;
+  background: #333;
+  position: fixed;
+  user-select: none;
+  transition: left .5s, right .5s;
+  right: 0px; }
+  .backpack.dropzone .animation {
+    height: 80px;
+    width: 250px;
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center; }
+  .backpack.dropzone .title::before {
+    content: 'Save to'; }
+  .backpack.dropzone.closed {
+    right: -250px; }
+  .backpack.dropzone.hover .animation {
+    animation: sxt-play-anim-hover 0.91s steps(21);
+    animation-fill-mode: forwards;
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/hoverstate.png") left center; }
+
+@keyframes sxt-play-anim-hover {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: -5250px; } }
+  .backpack.dropzone.saving .title::before {
+    content: 'Saving to'; }
+  .backpack.dropzone.saving .animation {
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saving_loop.png") left center;
+    animation: sxt-play-anim-saving steps(59) 2.46s infinite; }
+
+@keyframes sxt-play-anim-saving {
+  100% {
+    background-position: -14750px; } }
+  .backpack.dropzone.saved .title::before {
+    content: 'Saved to'; }
+  .backpack.dropzone.saved .animation {
+    background: url("chrome-extension://lifbcibllhkdhoafpjfnlhfpfgnpldfl/assets/backpack/dropzone/saved.png") left center;
+    animation: sxt-play-anim-saved steps(20) 0.83s forwards; }
+
+@keyframes sxt-play-anim-saved {
+  100% {
+    background-position: -5000px; } }
+</style><script async="" src="./Tutorials _ Microsemi_files/modules.1810afb089b838b62ed8.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><link id="mktoForms2BaseStyle" rel="stylesheet" type="text/css" href="./Tutorials _ Microsemi_files/forms2.css"><link id="mktoForms2ThemeStyle" rel="stylesheet" type="text/css" href="./Tutorials _ Microsemi_files/forms2-theme-simple.css"><style>/* Add your custom CSS below */
+#honeypot, label[for=honeypot] {display:none !important;}
+</style></head>
+
+    <body class="left-1-main">
+<!-- Google Tag Manager V0.0.10 from Tools for Joomla -->
+<noscript><iframe src='//www.googletagmanager.com/ns.html?id=GTM-P5N5Q5'
+height='0' width='0' style='display:none;visibility:hidden'></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P5N5Q5');</script>
+<!-- End Google Tag Manager -->
+<script>window.dataLayer = window.dataLayer || [];</script>
+		<div class="cookiepopup cookiepopup-bottom"></div>
+		<div id="header" class="clear clearfix">
+                <div class="gutter clearfix">
+                                                        <div class="headnew">
+                                              <div class="logoNew">
+                                                <div id="logo"><a href="https://www.microsemi.com/" title="Microsemi">Microsemi</a></div>
+                                              </div>
+                                            <div class="newLogin">
+                                                                                                    <div class="moduletable_tmenu clearfix"><style>
+.lastmenu a
+{
+background: url("/templates/je-construct-community/images/spacer.gif") !important;
+}
+</style>
+<ul class="menu last-child">
+<li class="item-509"><a href="https://www.microsemi.com/company/quality">Quality</a></li><li class="item-511"><a href="https://www.microchip.com/documentlisting/investors-home">Investors</a></li><li class="item-3701"><a href="https://www.microsemi.com/salescontacts">Sales Contacts</a></li><li class="item-4965 lastmenu last_item"><a href="https://www.microsemi.com/parametricsearch">Parametric Search</a></li></ul>
+
+		</div><div class="moduletable_loginmod clearfix"><div id="btl">
+	<!-- Panel top -->
+	<div class="btl-panel" style="float: left;">
+					<!-- Login button -->
+						<span id="btl-panel-login" class="btl-modal" style="color:#ffffff;">Login</span>
+						<!-- Registration button -->
+			<!-- < ?php
+			if($enabledRegistration){
+				$option = JRequest::getCmd('option');
+				$task = JRequest::getCmd('task');
+				if($option!='com_user' && $task != 'register' ){
+			? >
+			<span id="btl-panel-registration" class="< ?php echo $effect;? >">< ?php echo JText::_('JREGISTER');? ></span>
+			< ?php }
+			} ? > -->
+
+
+			</div>
+	<!-- content dropdown/modal box -->
+	
+	<div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var btlOpt =
+{
+	BT_AJAX					:'https://www.microsemi.com/product-directory/fpgas-socs-training/4339-fpga-training-tutorials#overview',
+	BT_RETURN				:'/product-directory/fpgas-socs-training/4339-fpga-training-tutorials',
+	RECAPTCHA				:'none',
+	LOGIN_TAGS				:'',
+	REGISTER_TAGS			:'',
+	EFFECT					:'btl-modal',
+	ALIGN					:'left',
+	BG_COLOR				:'#6d850a',
+	MOUSE_EVENT				:'click',
+	TEXT_COLOR				:'#fff'
+}
+if(btlOpt.ALIGN == "center"){
+	BTLJ(".btl-panel").css('textAlign','center');
+}else{
+	BTLJ(".btl-panel").css('float',btlOpt.ALIGN);
+}
+BTLJ("input.btl-buttonsubmit,button.btl-buttonsubmit").css({"color":btlOpt.TEXT_COLOR,"background":btlOpt.BG_COLOR});
+//BTLJ("#btl .btl-panel > span").css({"color":btlOpt.TEXT_COLOR,"background-color":btlOpt.BG_COLOR,"border":btlOpt.TEXT_COLOR});
+/*]]>*/
+</script>
+
+
+		</div>
+                                                                                           </div>
+										    <div class="headsearchNew">
+                                                                                                        <div class="moduletable_sbox clearfix"><form action="https://www.microsemi.com/index.php?option=com_search&amp;task=search&amp;Itemid=1373" method="post">
+	<div class="search_sbox">
+		<label for="mod-search-searchword">&nbsp;</label><input name="searchword" id="mod-search-searchword" maxlength="150" class="inputbox_sbox" type="text" size="30" value="Search Microsemi.com" onblur="if (this.value==&#39;&#39;) this.value=&#39;Search Microsemi.com&#39;;" onfocus="if (this.value==&#39;Search Microsemi.com&#39;) this.value=&#39;&#39;;"><input type="submit" value="Search" class="button_sbox" onclick="this.form.searchword.focus();">	</div>
+</form>
+
+		</div>
+                                                                                               </div>
+                                             <div class="clearing"></div>
+
+                                      </div>
+                                                                                    <div id="nav" class="clear clearfix">
+                                              <div class="noindex">
+                                                <div class="mainnavnew">
+                                                  		<div class="moduletable">
+					<!-- Available in two variations: "light" and "dark" | Change <header> class to see impact. -->
+<header class="light">
+  <nav role="navigation">
+    <a href="javascript:void(0);" class="ic menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </a>
+    <a href="javascript:void(0);" class="ic close"></a>
+    <ul class="main-nav">
+      			<li class="top-level-link">
+									<a href="https://www.microsemi.com/products/"><span>Products &amp; Services</span></a>
+									<div class="sub-menu-block">
+					  <div class="mega_row">
+					  <div class="mega_row_box" style="width:575px;" "=""><ul class="sub-menu-lists">		<div class="moduletable">
+					<h3>Products</h3>
+					<style>
+.prod_div_mod {width:275px;float:left;}
+.prod_div_mod ul li a {color:#2E5291 !important;}
+</style>
+<div class="prod_div_mod">
+<ul>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/3720-audio-voice">Audio &amp; Voice</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/3590-circuit-protection">Circuit Protection</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/5508-data-center-solutions">Data Center Solutions</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/809-ics">Drivers, Interfaces, and PCIe Switches</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/3721-ethernet-solutions">Ethernet and PoE Solutions</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/1636-fpga-soc">FPGA &amp; SoC</a>
+</li>
+</ul>
+</div>
+<div class="prod_div_mod">
+<ul>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/1758-high-reliability">High-Reliability</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/3658-optical-networking">Optical Networking</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/606-discretes">Power Discretes &amp; Modules</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/ics/853-power-management">Power Management</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/973-rf-microwave-a-millimeter-wave">RF, Microwave &amp; Millimeter Wave</a>
+</li>
+<li style="list-style:none;line-height: 25px;">
+	<a href="https://www.microsemi.com/product-directory/3425-timing-synchronization">Timing &amp; Synchronization</a>
+</li>
+</ul>
+</div>
+<div style="clear:both;"></div>		</div>
+	</ul></div><div class="mega_row_box" style="width:300px;" "=""><ul class="sub-menu-lists"><li><div class="main_menu_custom_box">
+<h3><a href="https://www.microsemi.com/product-directory/1021-services">Services</a></h3>
+<ul>
+<li><a href="https://www.microsemi.com/product-directory/services/1043-mixed-signal-asic-design-services">ASIC Design Services</a></li>
+<li><a href="https://www.microsemi.com/product-directory/services/3711-fpga-soc-design">FPGA &amp; SoC Services</a></li>
+<li><a href="https://www.microsemi.com/product-directory/services/3312-module-hybrid-design">Module &amp; Hybrid Design Services</a></li>
+<li><a href="https://www.microsemi.com/product-directory/services/3710-package-miniaturization-services">Package Miniaturization Services</a></li>
+<li><a href="https://www.microsemi.com/product-directory/services/3313-rugged-power-supply-design-services">Rugged Power Supply Design Services</a></li>
+<li><a href="https://www.microsemi.com/product-directory/services/3573-time-frequency-services">Synchronization Services</a></li>
+</ul>
+</div></li></ul></div><div class="mega_row_box" style="width:575px;" "=""><ul class="sub-menu-lists"><li><div>
+<div><strong>New Product</strong></div>
+<div style="width: 175px; float: left; padding: 10px 0 0 0;"><a href="https://www.microsemi.com/product-directory/fpgas/3854-polarfire-fpgas"><img src="./Tutorials _ Microsemi_files/PolarFire_FPGA_Product_Chip_Image_Front_and_Back_LR.png" border="0" title="PolarFire FPGA Family" style="width: 85%;"></a></div>
+<div style="width: 341px; float: left; padding: 0 10px;"><strong><a href="https://www.microsemi.com/product-directory/fpgas/3854-polarfire-fpgas" style="color: #2e5291;">PolarFire FPGA Family</a></strong>
+<ul style="list-style-position: inside; padding-left: 5px;">
+<li>Cost-optimized lowest power mid-range FPGAs</li>
+<li>250 Mbps to 12.7 Gbps transceivers</li>
+<li>100K to 500K LE, up to 33 Mbits of RAM</li>
+<li>Best-in-class security and exceptional reliability</li>
+</ul>
+<div style="float: right;"><a href="https://www.microsemi.com/product-directory/fpgas/3854-polarfire-fpgas" style="text-decoration: underline;">Learn More</a></div>
+</div>
+<div class="clearing">&nbsp;</div>
+</div></li></ul></div>						<div class="clearing"></div>
+					  </div>
+					</div>
+			</li>
+					<li class="top-level-link">
+									<a href="https://www.microsemi.com/applications/"><span>Applications</span></a>
+									<div class="sub-menu-block">
+					  <div class="mega_row">
+					  <div class="mega_row_box" style="width:100%;" "=""><ul class="sub-menu-lists">		<div class="moduletable">
+					<style>
+.app_div_mod {width:265px;float:left; min-height:272px;}
+.app_div_mod_ul li a {color:#2E5291 !important;}
+</style>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/automotive" style="color: #646464;">Automotive</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/automotive/advanced-driver-assist-systems-adas">Advanced Driver Assist Systems (ADAS)</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/automotive/body-electronics">Body Electronics</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/automotive/infotainment">Infotainment</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/automotive/powertrain-ev-charging">Powertrain &amp; EV Charging</a>
+	</li>
+	</ul>
+</div>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/commercial-aviation" style="color: #646464;">Commercial Aviation</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/commercial-aviation/actuation-systems">Actuation Systems</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/commercial-aviation/cabin-management-systems">Cabin Management System</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/commercial-aviation/cockpit-avionics">Cockpit Avionics</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/commercial-aviation/engine-systems-controls">Engine Systems &amp; Controls</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/commercial-aviation/rf-avionics-systems">RF &amp; Microwave Systems</a>
+	</li>
+	</ul>
+</div>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/communications" style="color: #646464;">Communications</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/communications/mobile-infrastructure">5G / Mobile Infrastructure</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/communications/customer-premise-equipment">Broadband Home / CPE</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/communications/broadcast-video">Broadcast Video</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/communications/access-metro-network">Converged Access Network</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/communications/enterprise-infrastructure">Enterprise Infrastructure</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/communications/metro-core-dci-network">Metro / Core / DCI Network</a>
+	</li>
+	</ul>
+</div>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/data-center" style="color: #646464;">Data Centers</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/data-centers/machine-learning-appliances">Machine Learning Appliances</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/data-center/motherboard-rack-infrastructure">Motherboard &amp; Rack Infrastructure </a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/data-center/nvm-storage">NVMe Storage</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/data-center/rack-scale-infrastructure">Rack Scale Design</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/data-center/storage-servers">Storage Servers</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/data-center/storage-systems">Storage Systems</a>
+	</li>
+	</ul>
+</div>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/defense" style="color: #646464;">Defense</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/defense/integrated-vehicle-systems">Integrated Vehicle Systems</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/defense/military-communications">Military Communications</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/defense/radar-ew">Radar Electronic Warfare</a>
+	</li>
+	</ul>
+</div>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/industrial" style="color: #646464;">Industrial</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/hmi">HMI (Human Machine Interface)</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/industrial-ethernet">Industrial Ethernet Networking</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/industrial-imaging">Industrial Imaging</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/more-industrial-applications">More Industrial Applications</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/motor-control">Motor Control</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/physical-security">Physical Security</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/programmable-logic-control">Programmable Logic Control</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/safety-heritage">Safety Heritage</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/smart-energy">Smart Energy</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/test-scientific-and-measurement">Test, Scientific and Measurement</a>
+	</li>
+	</ul>
+</div>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/medical" style="color: #646464;">Medical</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/medical-instrumentation/imaging">Medical Imaging</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/medical/medical-instrumentation">Medical Instrumentation</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/medical/medical-implantable-ingestible">Medical-Implantable/Ingestible</a>
+	</li>
+	</ul>
+</div>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/space" style="color: #646464;">Space</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/satellite-bus-platform/altitude-orbit-control">Attitude &amp; Orbit Control</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/satellite-payloads/digital-communications-payload">Digital Communications Payload</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/satellite-bus-platform/power-distribution-control">Electrical Power Systems</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/landers/instrument-payload">Remote Sensing Payload</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/launchers/telemetry-tracking-control">Telemetry Tracking &amp; Control</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/satellite-payloads/rf-repeater-payload">Transparent RF Transponder</a>
+	</li>
+	</ul>
+</div>
+<div class="app_div_mod">
+<h3><a href="https://www.microsemi.com/applications/system-solutions" style="color: #646464;">System Solutions</a></h3>
+<ul class="app_div_mod_ul">
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industry-solutions/education">Education</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/enterprise/financial-services">Financial Services</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/defense/timing-solutions">Government</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/enterprise/healthcare">Healthcare</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/enterprise/oil-gas">Oil &amp; Gas</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industrial/power-utilities">Power Utilities</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/industry-solutions/retail">Retail</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/system-solutions/stadiums-arenas">Stadiums-Arenas</a>
+	</li>
+		<li style="list-style:none;line-height: 25px;">
+		<a href="https://www.microsemi.com/applications/enterprise/transportation">Transportation</a>
+	</li>
+	</ul>
+</div>
+<div style="clear:both;"></div>
+		</div>
+	</ul></div>						<div class="clearing"></div>
+					  </div>
+					</div>
+			</li>
+					<li class="top-level-link">
+									<a href="https://www.microsemi.com/salescontacts"><span>Ordering</span></a>
+									<div class="sub-menu-block">
+					  <div class="mega_row">
+					  <div class="mega_row_box" style="width:100%;" "=""><ul class="sub-menu-lists"><li><div class="main_menu_custom_box">
+<h3>How to Buy</h3>
+<ul>
+<li><a href="https://www.microchipdirect.com/">Microchip Purchasing - Find your Microsemi products here</a></li>
+<li><a href="https://www.microsemi.com/msccstore">Available Stock Search</a></li>
+<li><a href="https://www.microsemi.com/company/order-status" style="font-size: 15.36px;">Order Status</a></li>
+<li><a href="https://www.microsemi.com/company/request-a-quote-or-samples">Request a Quote or Samples</a></li>
+<li><a href="https://www.microchipdirect.com/contact">Contact Microchip Purchasing and Client Services Support</a></li>
+<li><a href="https://www.microsemi.com/salescontacts">Sales Contacts</a></li>
+</ul>
+</div>
+<div class="clearing">&nbsp;</div></li></ul></div>						<div class="clearing"></div>
+					  </div>
+					</div>
+			</li>
+					<li class="top-level-link">
+									<a href="https://www.microsemi.com/company/about-us"><span>Company</span></a>
+									<div class="sub-menu-block">
+					  <div class="mega_row">
+					  <div class="mega_row_box" style="width:100%;" "=""><ul class="sub-menu-lists"><li><div class="main_menu_custom_box">
+<h3>Company</h3>
+<ul>
+<li><a href="https://www.microsemi.com/company/about-us">About Us</a></li>
+<li><a href="https://www.microsemi.com/company/acquisitions">Acquisitions</a></li>
+<li><a href="https://www.microsemi.com/company/aviation-center-of-excellence">Aviation Center Of Excellence</a></li>
+<li><a href="https://www.microsemi.com/company/awards">Awards</a></li>
+<li><a href="https://www.microsemi.com/blog">Blog</a></li>
+<li><a href="https://careers.microchip.com/" target="_blank">Careers</a></li>
+</ul>
+</div>
+<div class="main_menu_custom_box">
+<h3>&nbsp;</h3>
+<ul>
+<li><a href="https://www.microsemi.com/corporate-contacts">Corporate Contacts</a></li>
+<li><a href="https://www.microsemi.com/eventlist">Events</a></li>
+<li><a href="https://www.microsemi.com/company/in-the-news">In the News</a></li>
+<li><a href="https://www.microchip.com/documentlisting/investors-home">Investors</a></li>
+<li><a href="https://www.microsemi.com/locations">Locations</a></li>
+</ul>
+</div>
+<div class="main_menu_custom_box">
+<h3>&nbsp;</h3>
+<ul>
+<li><a href="https://www.microchip.com/documentlisting/news-and-events">Press Releases</a></li>
+<li><a href="https://www.microsemi.com/company/quality">Quality</a></li>
+<li><a href="https://www.microsemi.com/company/technology">Technology</a></li>
+<li><a href="https://www.microsemi.com/company/terms-and-conditions">Terms and Conditions</a></li>
+<li><a href="https://www.microsemi.com/company/terms-of-use">Terms of Use</a></li>
+</ul>
+</div>
+<div class="clearing">&nbsp;</div></li></ul></div>						<div class="clearing"></div>
+					  </div>
+					</div>
+			</li>
+					<li class="top-level-link">
+									<a href="https://www.microsemi.com/product-directory/4194-partners"><span>Partners</span></a>
+									<div class="sub-menu-block">
+					  <div class="mega_row">
+					  <div class="mega_row_box" style="width:100%;" "=""><ul class="sub-menu-lists"><li><div class="main_menu_custom_box">
+<h3><a href="https://www.microsemi.com/product-directory/partners/4325-accelerate-ecosystem-partners">Accelerate Ecosystem Partners</a></h3>
+<ul>
+<li><a href="https://www.microsemi.com/product-directory/accelerate-ecosystem-partners/4327-intellectual-property-partners">Intellectual Property Partners</a></li>
+<li><a href="https://www.microsemi.com/product-directory/accelerate-ecosystem-partners/4410-reference-design-partners">Reference Design Partners</a></li>
+<li><a href="https://www.microsemi.com/product-directory/accelerate-ecosystem-partners/4411-technology-partners">Technology Partners</a></li>
+</ul>
+</div>
+<div class="main_menu_custom_box">
+<h3><a href="https://www.microsemi.com/product-directory/partners/4326-empower-channel-partners">Empower Channel Partners</a></h3>
+<ul>
+<li><a href="https://www.microsemi.com/salescontacts?ctype=4">Find a Channel Partner</a></li>
+<li><a href="https://www.microsemi.com/product-directory/partners/4326-empower-channel-partners#become-a-partner">Become a Channel Partner</a></li>
+<li><a href="https://my.microsemi.com/">Partner Portal Login</a></li>
+</ul>
+</div>
+<div class="main_menu_custom_box">
+<h3>Solution Partners</h3>
+<ul>
+<li><a href="https://www.microsemi.com/product-directory/design-support-resources/4266-compatible-devices-poe">Compatible PoE Devices</a></li>
+<li><a href="https://www.microsemi.com/product-directory/partners/4265-compatibility-reports-storage-cards">Storage Cards Compatibility Reports</a></li>
+<li><a href="https://www.microsemi.com/product-directory/partners/4507-syncworld">SyncWorld </a></li>
+</ul>
+</div>
+<div class="clearing">&nbsp;</div></li></ul></div>						<div class="clearing"></div>
+					  </div>
+					</div>
+			</li>
+					<li class="top-level-link">
+									<a href="https://www.microsemi.com/product-directory/4193-support"><span>Support</span></a>
+									<div class="sub-menu-block">
+					  <div class="mega_row">
+					  <div class="mega_row_box" style="width:100%;" "=""><ul class="sub-menu-lists"><li><div class="main_menu_custom_box" style="width: 356px;">
+<h3><a href="https://www.microsemi.com/product-directory/support/4264-design-support-resources">Documents and Resources</a></h3>
+<ul>
+<li><a href="https://www.microsemi.com/product-directory/partners/4265-compatibility-reports-storage-cards">Compatibility Reports (Storage Cards)</a></li>
+<li><a href="https://www.microsemi.com/product-directory/design-support-resources/4266-compatible-devices-poe">Compatible Devices (PoE)</a></li>
+<li><a href="https://www.microsemi.com/product-directory/design-support-resources/4267-development-tools-software">Development Tools &amp; Software</a></li>
+<li><a href="https://www.microsemi.com/product-directory/design-support-resources/4268-knowledge-base-ethernet-switch-phy-ip-signal-integrity">Knowledge Base (Ethernet and Signal Integrity)</a></li>
+<li><a href="http://soc.microsemi.com/kb/search.aspx">Knowledge Base (FPGA &amp; SoC)</a></li>
+<li><a href="http://ask.adaptec.com/">Knowledge Base (Storage Cards)</a></li>
+<!--<li><a href="/product-directory/design-support-resources/4272-product-briefs">Product Briefs</a></li>-->
+<li><a href="https://www.microsemi.com/company/quality/product-notifications">Product Notifications</a></li>
+<li><a href="https://www.microsemi.com/product-directory/design-support-resources/4275-technical-articles">Technical Articles</a></li>
+</ul>
+</div>
+<div class="main_menu_custom_box" style="width: 356px;">
+<h3><a href="https://www.microsemi.com/product-directory/support/4196-product-support">Design Support</a></h3>
+<ul>
+<li><a href="https://www.microsemi.com/product-directory/product-support/4217-fpgas-socs-support">FPGA &amp; SoC Support</a></li>
+<li><a href="https://www.microsemi.com/product-directory/design-support/4218-microsemi-adaptec-storage-solutions-support">Microsemi Adaptec RAID/HBA Support</a></li>
+<li><a href="https://www.microsemi.com/product-directory/product-support/4219-power-small-signal-and-circuit-protection-discretes-support">Power, Small Signal and Protection Discretes Support</a></li>
+<li><a href="https://www.microsemi.com/product-directory/product-support/4220-timing-synchronization-systems-support">Timing Systems Support</a></li>
+</ul>
+<h3 style="margin-top: 20px;"><a href="https://www.microsemi.com/product-directory/support/4195-contact-support">Contact Support</a></h3>
+<ul>
+<li><a href="https://www.microsemi.com/salescontacts">Ask A Sales Rep</a></li>
+</ul>
+</div>
+<div class="main_menu_custom_box" style="width: 356px;">
+<h3><a href="https://www.microsemi.com/product-directory/support/4225-registered-users-partners">Product Portals</a></h3>
+<ul>
+<li><a href="https://my.microsemi.com/AWelcome/HomeRNew.aspx">Audio &amp; Voice Portal</a></li>
+<li><a href="https://ethernet.microsemi.com/signin">Ethernet and Signal Integrity Portal</a></li>
+<li><a href="https://soc.microsemi.com/Portal/Default.aspx">FPGA &amp; SoC Portal</a></li>
+<li><a href="https://www.microsemi.com/product-directory/registered-users-partners/4231-mymicrosemi-partner-portal">MyMicrosemi Partner and Customer Portal</a></li>
+<li><a href="http://storage.microsemi.com/myPMC">Optical Networking Portal</a></li>
+<li><a href="http://storage.microsemi.com/myPMC">Storage ICs Portal (SAS/SATA &amp; Switchtec PCIe Switches)</a></li>
+<li><a href="http://sds.microsemi.com/software.php">Timing ICs Portal</a></li>
+<li><a href="https://my.microsemi.com/AWelcome/HomeRNew.aspx">Timing Systems and Components Portal</a></li>
+</ul>
+</div>
+<div class="main_menu_custom_box" style="width: 356px;">
+<h3>Quality &amp; Packaging</h3>
+<ul>
+<li><a href="https://www.microsemi.com/packaging-information/partpackage/list">Packaging Information</a></li>
+<li><a href="https://www.microsemi.com/company/quality">Quality</a></li>
+</ul>
+<h3 style="margin-top: 20px;"><a href="https://www.microsemi.com/product-directory/support/4281-rma-requests">Returns</a></h3>
+<ul>
+<li><a href="https://www.microsemi.com/product-directory/returns/4282-fpga-soc-rma">FPGA &amp; SoC RMA</a></li>
+<li><a href="https://www.microsemi.com/product-directory/returns/4283-poe-injectors-midspans-and-switches-rma">PoE Injectors, Midspans and Switches RMA</a></li>
+<li><a href="http://ask.adaptec.com/app/answers/detail/a_id/4948">Storage Cards RMA</a></li>
+<li><a href="https://www.microsemi.com/product-directory/returns/4285-timing-synchronization-systems-rma">Timing Systems RMA</a></li>
+</ul>
+</div>
+<div class="main_menu_custom_box" style="width: 356px;">
+<h3><a href="https://www.microsemi.com/product-directory/support/4243-training">Training</a></h3>
+<ul>
+<li><a href="https://www.microsemi.com/product-directory/training/4244-fpgas-socs-training">FPGA &amp; SoC Training</a></li>
+<li><a href="https://www.microsemi.com/product-directory/fpgas-socs-training/4340-webcasts">FPGA &amp; SoC Webcasts</a></li>
+<li><a href="https://www.microsemi.com/product-directory/training/4245-timing-synchronization-systems-training">Timing Systems Webcasts</a></li>
+</ul>
+</div>
+<div class="clearing">&nbsp;</div></li></ul></div>						<div class="clearing"></div>
+					  </div>
+					</div>
+			</li>
+		    </ul>
+  </nav>
+
+</header>
+		</div>
+	
+                                                </div>
+                                              </div>
+                                          </div>
+                                          <!-- end nav-->
+
+                                                                                          </div>
+                                  <!--end gutter -->
+
+        </div>
+        <!-- end header-->
+        <div id="footer-push">
+            <div class="banner-top">
+				            </div>
+            
+            <div class="wrapper">
+                <div class="inner_wrapper">
+                    <div class="container_main"> <a id="page-top" name="page-top"></a>
+
+                        <div id="body-container">
+                                                                                                            <div id="content-container" class="clear clearfix">
+                            <div id="center-block-home">
+                              <div id="center-block1"><!-- center-block rename to center-block1 becoz hide hover menu -->
+                                <div class="contentBlock">
+                                                                                                                                      </div>
+                              </div>
+                                                            <div class="clearing"></div>
+                              </div>
+                                <!-- center-block end -->
+                              </div>
+                              <div id="content-container2">
+                                <div id="load-first" class="clearfix"> <a id="content" name="content"></a>
+                                    <div id="content-main">
+                                      <div class="gutter">
+                                                                                          <div class="slideNew">
+                                                        <div id="image-slider" class="clear clearfix">
+                                                            <!-- flexheader3 Output starts here --><!-- copyright Andre Hotzler, released under the GPL --><!-- visit http://www.andrehotzler.de for more information --><img style="border: 0; width:100%; height:0%;" alt="" title="" src="./Tutorials _ Microsemi_files/globalsupport.jpg"><!-- flexheader3 end -->
+                                                        </div>
+                                                        <!-- end nav-->
+                                                  </div>
+                                        
+                                                                                        <div id="content-top" class="clearfix">
+                                                                                                        <div id="top" class="count-1">
+                                                            <div class="moduletable gutter clearfix"><ol class="breadcrumb">
+<li><a href="https://www.microsemi.com/">Home</a></li><li><a href="https://www.microsemi.com/products/">Products &amp; Services</a></li><li><a href="https://www.microsemi.com/product-directory/4193-support">Support</a></li><li><a href="https://www.microsemi.com/product-directory/support/4243-training">Training</a></li><li><a href="https://www.microsemi.com/product-directory/training/4244-fpgas-socs-training">FPGAs &amp; SoCs Training</a></li><li class="active">Tutorials</li></ol>
+
+		</div>
+                                                        </div>
+                                                        <!-- end top -->
+                                                                                                                                                                                                                </div>
+                                                <!-- end content-top -->
+                                                                                            
+<div id="system-message-container">
+</div>
+                                                                                        <style>
+	.samplebuyTable { border: 1px solid #ddd;width: 100%;max-width: 100%;margin-bottom: 20px;line-height: 1.8em;font-weight: 600;text-align: left; }
+	.samplebuyTable th {vertical-align: bottom;padding: 8px;border: 1px solid #ddd;}
+	.samplebuyTable td {vertical-align: top;padding: 8px;border: 1px solid #ddd;font-weight: normal;}
+  .octo_box {margin: 10px 0px;background: #F5F8FA;padding: 12px;border-top: 3px solid #e1e8ed;}
+  .oct_prod_name {font-weight: 600;font-size: 16px;}
+  .oct_prod_snip {font-size: 11px;}
+	#pdslider {position: relative;overflow: hidden;}
+	#pdslider ul {position: relative;margin: 0;padding: 0;height: 280px;list-style: none;}
+	#pdslider ul li {position: relative;display: block;float: left;margin: 0;padding: 0;width: 250px;height: 280px;text-align: center;line-height: 280px;}
+</style>
+<script>
+jQuery(document).ready(function ($) {
+  setInterval(function () {
+      moveRight();
+  }, 2000);
+	var slideCount = $('#pdslider ul li').length;
+	var slideWidth = $('#pdslider ul li').width();
+	var slideHeight = $('#pdslider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	$('#pdslider').css({ width: slideWidth, height: slideHeight });
+	$('#pdslider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+  $('#pdslider ul li:last-child').prependTo('#pdslider ul');
+  function moveLeft() {
+        $('#pdslider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#pdslider ul li:last-child').prependTo('#pdslider ul');
+            $('#pdslider ul').css('left', '');
+        });
+    };
+    function moveRight() {
+        $('#pdslider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#pdslider ul li:first-child').appendTo('#pdslider ul');
+            $('#pdslider ul').css('left', '');
+        });
+    };
+});
+</script>
+<link rel="stylesheet" href="./Tutorials _ Microsemi_files/aprd.css" type="text/css">
+<h1>Tutorials</h1>
+			<!-- begin overview tab -->
+
+										
+
+<script type="text/javascript">document.write( String.fromCharCode(60)+'style type="text/css">div.tabber_item_inactive { height: 0; }div.tabber_nav { display: block !important; }div.tabber_nav li.tabber_count_1 { display: block !important; }.tabber_title { display: none !important; }'+String.fromCharCode(60)+'/style>' );</script><style type="text/css">div.tabber_item_inactive { height: 0; }div.tabber_nav { display: block !important; }div.tabber_nav li.tabber_count_1 { display: block !important; }.tabber_title { display: none !important; }</style>
+<div class="tabber_container tabber_container_1_  rounded" id="tabber_container_1____457___">
+<div class="tabber_nav" style="display: block;">
+<ul class="tabber_tabs">
+<li style="display: block;" class="tabber_tab tabber_count_1 microsemitab active" id="tabber_tab_1____457___-1" ref="overview"><a href="https://www.microsemi.com/product-directory/fpgas-socs-training/4339-fpga-training-tutorials#overview"><span>Overview</span></a></li>
+</ul>
+<div style="clear:both;"></div>
+</div>
+<div class="tabber_content  tabber_count_1 microsemitab tabber_item_active" id="tabber_content_1____457___" style="height: auto;">
+<script type="text/javascript">document.getElementById('tabber_container_1____457___').setAttribute( 'class', document.getElementById('tabber_container_1____457___').className.replace(/\btabber_noscript\b/,'') );</script>
+<div style="margin: 0px; position: relative; overflow: hidden; height: auto;"><div class="tabber_item tabber_count_1 microsemitab tabber_item_active" id="tabber_item_1____457___-1" style="display: block; margin: 0px;">
+<a name="1____457___-1"></a><h2 class="tabber_title" style="display: none;">Overview</h2>
+					<div id="ph-overview"><h4>FPGA &amp; SoC Tutorials</h4>
+<span class="smallText">NOTE : Please unzip design files in the root directory of C drive (i.e. C :\) using 7-Zip. If you need to unzip the design files in a non-root directory, you can refer to <a href="http://soc.microsemi.com/kb/article.aspx?id=KI8879">Known Issue 8879</a></span> <span id="ctl00_contentArea_Doctable1_lblMsg"></span>
+<table class="zebraTable" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td class="title"><a href="https://www.microsemi.com/document-portal/doc_download/130776-proasic3-e-proto-kit-user-s-guide-and-tutorial" id="130776">ProASIC3/E Proto Kit User's Guide and Tutorial</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=A3PE_PROTO_KIT_DF">Design Files</a>(ZIP, 670 KB, 9/10)</li>
+</ul>
+</td>
+<td class="nowrap">6 MB</td>
+<td class="nowrap">11/2012</td>
+</tr>
+<tr class="even">
+<td class="title"><a href="https://www.microsemi.com/document-portal/doc_download/131528-arm-sup-reg-sup-cortex-sup-tm-sup-m1-embedded-processor-tutorial" id="131528">ARM<sup>®</sup> Cortex<sup>TM</sup>-M1 Embedded Processor Tutorial</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=CortexM1_Proc_Tutorial_DF">Design Files</a> (RAR, 124 MB, 11/12)</li>
+</ul>
+</td>
+<td class="nowrap">3 MB</td>
+<td class="nowrap">5/2012</td>
+</tr>
+<tr>
+<td class="title"><a href="https://www.microsemi.com/document-portal/doc_download/131542-libero-soc-quick-start-guide-for-software-v11-4" id="131542">Libero SoC Quick Start Guide for Software v10.0</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=LiberoSoC_QS_DF">Design Files</a> (RAR, 6.3 MB, 11/12)</li>
+</ul>
+</td>
+<td class="nowrap">4 MB</td>
+<td class="nowrap">5/2012</td>
+</tr>
+<tr class="even">
+<td class="title"><a href="https://www.microsemi.com/document-portal/doc_download/130936-smartfusion-csoc-webserver-demo-using-uip-and-freertos-user-guide" id="130936">SmartFusion System-on-Chip (SoC) FPGA Webserver Demo Using uIP and FreeRTOS User's Guide</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=A2F_Webserver_uIPRTOS_SoftConsole_DF">Design files using Softconsole</a> (RAR, 15.4 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=A2F_Webserver_uIPRTOS_IAR_DF">Design files using IAR</a> (RAR, 14 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=A2F_Webserver_uIPRTOS_Keil_DF">Design files using Keil</a> (RAR, 14 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=A2F_Webserver_uIPRTOS_PF">Programming File</a> (RAR, 729 KB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=A2F_EVAL_Demo_DF">Webserver Libero Design Files</a> (ZIP, 8.8 MB, 8/12)</li>
+</ul>
+</td>
+<td class="nowrap">3 MB</td>
+<td class="nowrap">2/2012</td>
+</tr>
+<tr>
+<td class="title"><a href="https://www.microsemi.com/document-portal/doc_download/131533-microsemi-libero-ide-quick-start-guide-tutorial" id="131533">Microsemi Libero IDE Quick Start Guide &amp; Tutorial</a>
+<ul>
+<li><a href="https://www.microsemi.com/document-portal/doc_download/131782-libero-tutorial" id="131782">Libero Design Files</a> (ZIP, 8.5 MB, 1/11)</li>
+</ul>
+</td>
+<td class="nowrap">5 MB</td>
+<td class="nowrap">2/2012</td>
+</tr>
+<tr class="even">
+<td class="title"><a href="https://www.microsemi.com/document-portal/doc_download/130837-igloo-icicle-evaluation-kit-user-s-guide" id="130837">IGLOO Icicle Evaluation Kit User's Guide</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=AGL_ICICLE_KIT_blueOLED_DF">Design Files</a> (Blue OLED, Rev D, ZIP, 3.5 MB, 8/09)</li>
+</ul>
+</td>
+<td class="nowrap">4 MB</td>
+<td class="nowrap">2/2012</td>
+</tr>
+<tr>
+<td class="title"><a href="https://www.microsemi.com/document-portal/doc_download/131540-using-keil-micro-vision-and-microsemi-smartfusion" id="131540">Using Keil µVision and Microsemi SmartFusion</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=Keil_SmartFusion_tutorial_PF">Programming File</a> (ZIP, 91 KB, 7/10)</li>
+</ul>
+</td>
+<td class="nowrap">1 MB</td>
+<td class="nowrap">1/2012</td>
+</tr>
+</tbody>
+</table>
+<a id="sw" name="sw"></a>
+<h4>Design Software Tutorials</h4>
+<span class="smallText">NOTE : Please unzip design files in the root directory of C drive (i.e. C :\) using 7-Zip. If you need to unzip the design files in a non-root directory, you can refer to <a href="http://soc.microsemi.com/kb/article.aspx?id=KI8879">Known Issue I8879</a></span> <span id="ctl00_contentArea_Doctable2_lblMsg"></span>
+<table class="zebratable" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr class="zebratableodd">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131532-digital-mixed-signal-power-manager-tutorial" id="131532">Digital Mixed Signal Power Manager Tutorial</a></td>
+<td>4 MB</td>
+<td>2/2013</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131552-displaying-pot-level-with-leds-libero-soc-and-micro-vision4-ide-flow-tutorial-for-smartfusion-csoc" id="131552">Displaying POT Level with LEDs: Libero SoC and µVision4 IDE Flow Tutorial for SmartFusion SoC FPGA</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_Libero_Keil_POTlevel_tut_DF">Design Files</a> (RAR, 14 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_Libero_Keil_POTlevel_tut_PF">Programming Files</a> (RAR, 82.6 KB, 5/12)</li>
+</ul>
+</td>
+<td>2 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="zebratableodd">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131553-smartfusion-csoc-building-executable-image-in-release-mode-and-loading-into-envm-tutorial" id="131553">SmartFusion SoC FPGA: Building Executable Image in Release Mode and Loading into eNVM Tutorial</a></td>
+<td>1 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131542-libero-soc-quick-start-guide-for-software-v11-4" id="131542">Libero SoC Quick Start Guide for Software v10.0</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=LiberoSoC_QS_DF">Design Files</a> (RAR, 6.3 MB, 11/12)</li>
+</ul>
+</td>
+<td>4 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="zebratableodd">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131557-using-uart-with-smartfusion-csoc-softconsole-standalone-flow-tutorial" id="131557">Using UART with SmartFusion SoC FPGA: SoftConsole Standalone Flow Tutorial</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_UART_SW_flow_tutorial_DF">Design Files</a> (RAR, 16.9 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_UART_SW_flow_tutorial_PF">Programming Files</a> (RAR, 133 KB, 5/12)</li>
+</ul>
+</td>
+<td>1 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131554-displaying-pot-values-over-uart-softconsole-standalone-flow-tutorial-for-smartfusion-csoc" id="131554">Displaying POT Values over UART SoftConsole Standalone Flow Tutorial for SmartFusion SoC FPGA</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_SoftConsole_POTlevel_UART_tutorial_DF">Design Files</a> (RAR, 15.9 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_SoftConsole_POTlevel_UART_tutorial_PF">Programming Files</a> (RAR, 142 KB, 5/12)</li>
+</ul>
+</td>
+<td>1 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="zebratableodd">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131556-using-uart-with-a-smartfusion-csoc-libero-soc-and-softconsole-flow-tutorial" id="131556">Using UART with a SmartFusion SoC FPGA Libero SoC and SoftConsole Flow Tutorial</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_UART_HW_flow_LiberoSoftConsole_tutorial_DF">Design Files</a> (RAR, 16.8 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_UART_HW_flow_LiberoSoftConsole_tutorial_PF">Programming Files</a> (RAR, 134 KB, 5/12)</li>
+</ul>
+</td>
+<td>1 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131550-displaying-pot-level-with-leds-libero-soc-and-iar-embedded-workbench-flow-tutorial-for-smartfusion-csoc" id="131550">Displaying POT Level with LEDs: Libero SoC and IAR Embedded Workbench Flow Tutorial for SmartFusion SoC FPGA</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_LiberoIAR_POTlevel_tutorial_DF">Design Files</a> (RAR, 13 MB, 12/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_LiberoIAR_POTlevel_tutorial_PF">Programming Files</a> (RAR, 152 KB, 5/12)</li>
+</ul>
+</td>
+<td>1 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="zebratableodd">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131551-displaying-pot-level-with-leds-libero-soc-and-softconsole-flow-tutorial-for-a-smartfusion-csoc" id="131551">Displaying POT Level with LEDs: Libero SoC and SoftConsole Flow Tutorial for a SmartFusion SoC FPGA</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_LiberoSC_POTlevel_tutorial_DF">Design Files</a> (RAR, 13.7 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_LiberoSoftConsole_POTlevel_tutorial_PF">Programming Files</a> (RAR, 153 KB, 5/12)</li>
+</ul>
+</td>
+<td>1 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131555-using-uart-with-a-smartfusion-csoc-libero-soc-and-iar-embedded-workbench-flow-tutorial" id="131555">Using UART with a SmartFusion SoC FPGA Libero SoC and IAR Embedded Workbench Flow Tutorial</a>
+<ul>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_UART_HW_flow_LiberoIAR_tutorial_DF">Design Files</a> (RAR, 8 MB, 11/12)</li>
+<li><a href="http://soc.microsemi.com/download/rsc/?f=SmartFusion_UART_HW_flow_LiberoIAR_tutorial_PF">Programming Files</a> (RAR, 45.1 KB, 5/12)</li>
+</ul>
+</td>
+<td>1 MB</td>
+<td>5/2012</td>
+</tr>
+<tr class="zebratableodd">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131533-microsemi-libero-ide-quick-start-guide-tutorial" id="131533">Microsemi Libero IDE Quick Start Guide &amp; Tutorial</a>
+<ul>
+<li><a href="https://www.microsemi.com/document-portal/doc_download/131782-libero-tutorial" id="131782">Libero Design Files</a> (ZIP, 8.5 MB, 1/11)</li>
+</ul>
+</td>
+<td>5 MB</td>
+<td>2/2012</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131541-tu0071-using-identify-with-libero-soc-v11-7-tutorial" id="131541">Tutorial for Using Identify with Libero SoC</a></td>
+<td>5 MB</td>
+<td>1/2012</td>
+</tr>
+<tr class="zebratableodd">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131912-synapticad-tutorials" id="131912">Synapticad Tutorials</a></td>
+<td>1 MB</td>
+<td>3/2011</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131906-synapticad-reactive-test-bench-tutorial" id="131906">SynaptiCAD Reactive Test Bench Tutorial</a></td>
+<td>65 KB</td>
+<td>3/2011</td>
+</tr>
+<tr class="even">
+<td><a href="https://www.microsemi.com/document-portal/doc_download/131558-smarttime-tutorial" id="131558">Microsemi SmartTime Tutorial</a>
+<ul>
+<li><a class="doclink" href="https://www.microsemi.com/document-portal/doc_download/131806-smarttime-tutorial-design-files" target="_blank" id="131806">SmartTime Tutorial Design Files</a> (ZIP, 54 KB, 07/05)</li>
+</ul>
+</td>
+<td>7.4 MB</td>
+<td>10/2014</td>
+</tr>
+</tbody>
+</table></div><!-- end overview tab -->
+<!-- begin Extranet Resources tab -->
+<!-- end Resources tab -->
+<!-- begin Applications tab -->
+<!-- end applications tab -->
+<div style="clear:both;"></div>
+</div></div>
+<div style="clear:both;"></div>
+</div>
+<div style="height:1px;"></div>
+</div>
+
+                                                                                    </div>
+                                        <!--end gutter --> </div>
+                                    <!-- end content-main -->
+                                        <div id="content-left" class="clearfix">
+                                                                                        <div id="left" class="count-1">
+                                                    <div class="gutter clearfix">
+                                                        <div class="moduletable-first clearfix"><style>
+.activelink {font-weight: 600 !important;color: #2E5291 !important;}
+</style>
+<h3 class="je-header">
+	<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4193&amp;lang=en&amp;view=subcat">
+		Support	</a>
+</h3>
+<!-- Start: Level 1 -->
+<ul class="menu">
+		<li class="item-4281">
+										<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4281&amp;lang=en&amp;view=subcat">
+							Returns						</a>
+								
+				<!-- Start: Level 2 -->
+								<!-- End: Level 2 -->
+		</li>
+			<li class="item-4196">
+										<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4196&amp;lang=en&amp;view=subcat">
+							Design Support						</a>
+								
+				<!-- Start: Level 2 -->
+								<!-- End: Level 2 -->
+		</li>
+			<li class="item-4243">
+										<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4243&amp;lang=en&amp;view=subcat">
+							Training						</a>
+								
+				<!-- Start: Level 2 -->
+								<ul class="menu">
+					  							
+						<li class="item-4245  ">
+												<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4245&amp;lang=en&amp;view=subcat">
+								Timing &amp; Synchronization Systems Webcasts							</a>
+								
+							
+							<!-- Start: Level 3-->
+														<!-- End: Level 3 -->
+						</li>
+													
+						<li class="item-4244 parent ">
+												<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4244&amp;lang=en&amp;view=subcat">
+								FPGAs &amp; SoCs Training							</a>
+								
+							
+							<!-- Start: Level 3-->
+														<ul class="menu">
+								  									<li class="item-4339 ">
+															<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4339&amp;lang=en&amp;view=subcat" class="activelink">
+											Tutorials										</a>
+														
+										<!-- Start: Level 4-->
+																				<ul class="menu">
+											  										</ul>
+																				<!-- End: Level 4 -->
+									</li>
+																		<li class="item-4345 ">
+															<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4345&amp;lang=en&amp;view=subcat">
+											Additional Information										</a>
+														
+										<!-- Start: Level 4-->
+																				<!-- End: Level 4 -->
+									</li>
+																		<li class="item-4342 ">
+															<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4342&amp;lang=en&amp;view=subcat">
+											Course Descriptions										</a>
+														
+										<!-- Start: Level 4-->
+																				<!-- End: Level 4 -->
+									</li>
+																		<li class="item-4343 ">
+															<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4343&amp;lang=en&amp;view=subcat">
+											Course Schedule										</a>
+														
+										<!-- Start: Level 4-->
+																				<!-- End: Level 4 -->
+									</li>
+																		<li class="item-4344 ">
+															<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4344&amp;lang=en&amp;view=subcat">
+											FPGA Training Registration										</a>
+														
+										<!-- Start: Level 4-->
+																				<!-- End: Level 4 -->
+									</li>
+																</ul>
+														<!-- End: Level 3 -->
+						</li>
+										</ul>
+								<!-- End: Level 2 -->
+		</li>
+			<li class="item-4264">
+										<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4264&amp;lang=en&amp;view=subcat">
+							Documents and Resources						</a>
+								
+				<!-- Start: Level 2 -->
+								<!-- End: Level 2 -->
+		</li>
+			<li class="item-4195">
+										<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4195&amp;lang=en&amp;view=subcat">
+							Contact Support						</a>
+								
+				<!-- Start: Level 2 -->
+								<!-- End: Level 2 -->
+		</li>
+			<li class="item-4225">
+										<a href="https://www.microsemi.com/index.php?option=com_microsemi&amp;Itemid=467&amp;id=4225&amp;lang=en&amp;view=subcat">
+							Product Portals						</a>
+								
+				<!-- Start: Level 2 -->
+								<!-- End: Level 2 -->
+		</li>
+	</ul>
+<!-- End: Level 1 -->
+
+		</div>
+                                                    </div>
+                                                    <!--end gutter --> </div>
+                                                <!-- end left -->
+                                                                                        </div>
+                                        <!-- end left -->
+
+                                </div>
+                                <!-- end load-first -->
+
+							</div>
+                        </div><!-- end container_main -->
+                    </div><!-- end inner_wrapper-->
+                </div> <!-- end wrapper-->
+            </div>
+	</div><!-- end footer-push -->
+	<div id="msccfooter">
+	                            <div id="footer" class="clear clearfix">
+                                <div class="gutter clearfix">
+									                                                                            <div class="moduletable clearfix">
+
+<div class="custom">
+	<p><a href="https://www.microsemi.com/products">Products</a> | <a href="https://www.microsemi.com/applications">Applications</a> | <a href="https://www.microsemi.com/company/about-us">Company</a> | <a href="https://careers.microchip.com/" target="_blank">Careers</a> | <a href="https://www.microchip.com/documentlisting/investors-home">Investors</a> | <a href="https://www.microsemi.com/form/11-customer-survey">Survey</a> | <a href="https://www.microsemi.com/company/privacy-policy">Privacy Policy</a> | <a href="https://www.microsemi.com/company/terms-and-conditions">Terms &amp; Conditions</a> | <a href="https://www.microsemi.com/company/product-disclaimer-notice">Product Disclaimer</a> | <a href="https://www.microsemi.com/company/terms-of-use">Terms of Use</a> | <a href="https://www.microsemi.com/blog">Blog</a> | <a href="https://www.linkedin.com/company/microsemi" target="_blank" style="padding: 0 0 0 5px;"><img src="./Tutorials _ Microsemi_files/LinkedIn-logo-x20.png" border="0"></a> <a href="https://www.youtube.com/user/MicrosemiCorp" target="_blank" style="padding: 0 0 0 5px;"><img src="./Tutorials _ Microsemi_files/YouTube-logo-x20.png" border="0"></a></p>
+<div id="cookie-eu" style="display: none;">
+<p>Our website uses cookies (including profiling cookies of authorised third parties) to give you a better browsing experience, and by continuing to use our site you accept our cookies policy. Find out more on how we use cookies and how you can change your settings by clicking <a href="https://www.microsemi.com/company/microsemi-cookie-statement">here</a>.</p>
+</div></div>
+
+		</div><div class="moduletable copyright clearfix">
+
+<div class="custom copyright">
+	<p style="margin-left: 27px;">© 2020 Microsemi, a wholly owned subsidiary of Microchip Technology Inc. All rights reserved. <br>Microsemi and the Microsemi logo are registered trademarks of Microsemi Corporation. All other trademarks and service marks are the property of their respective owners.</p></div>
+
+		</div><div class="moduletable clearfix">
+
+<div class="custom">
+	<script src="./Tutorials _ Microsemi_files/docicons.js" type="text/javascript"></script></div>
+
+		</div><div class="moduletable clearfix">
+
+<div class="custom">
+	 
+ 
+</div>
+
+		</div>
+                                                                    </div><!--end gutter -->
+                            </div><!-- end footer -->
+	</div>
+                            
+<script type="text/javascript" language="javascript">
+
+jQuery(document).ready(function() {
+
+	 if(jQuery('[name="docType[]"]:checked').length == 0 && jQuery('[name="docFeat[]"]:checked').length == 0){
+		 	 jQuery( ".docfeachk" ).prop( "checked", true );
+			 jQuery( ".doctypechk" ).prop( "checked", true );
+			 jQuery( "#docSel" ).prop( "checked", true );
+			 jQuery( "#feaSel" ).prop( "checked", true );
+	 }
+	 jQuery('#feaSel').click(function(event) {  //on click 
+        if(this.checked) { // check select status
+            jQuery('.docfeachk').each(function() { //loop through each checkbox
+                this.checked = true;  //select all checkboxes with class "checkbox1"               
+            });
+        }else{
+            jQuery('.docfeachk').each(function() { //loop through each checkbox
+                this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+            });         
+        }
+    });
+	jQuery('#docSel').click(function(event) {  //on click 
+        if(this.checked) { // check select status
+            jQuery('.doctypechk').each(function() { //loop through each checkbox
+                this.checked = true;  //select all checkboxes with class "checkbox1"               
+            });
+        }else{
+           jQuery('.doctypechk').each(function() { //loop through each checkbox
+                this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+            });         
+        }
+    });
+    
+    jQuery('#alldoctype').change(function() {  //on click 
+        if(this.checked) { // check select status
+            jQuery('.doctypechk').attr('disabled','disabled');
+            jQuery('#docSel').attr('disabled','disabled');
+            
+        }else{
+            jQuery('.doctypechk').removeAttr('disabled');
+            jQuery('#docSel').removeAttr('disabled');
+        }
+    });
+    
+});
+
+</script>
+
+  <!-- <link rel="stylesheet" href="/templates/je-construct-community/css/print.css" type="text/css" media="print"  />
+  <link rel="stylesheet" href="/templates/je-construct-community/css/micro-sites.css" type="text/css" media="screen"  />
+  <link rel="stylesheet" href="/templates/je-construct-community/css/custom_stylesheet_13.css?v=3" type="text/css" media="screen"  /> -->
+  
+
+
+<div class="custom">
+	<script src="./Tutorials _ Microsemi_files/doctracking.js" type="text/javascript"></script></div>
+
+                                    <!-- <div id="subscribe-to-newsletter">
+			<h3>Stay Informed<span id="toggle-icon">&#10010;</span></h3>
+			<div id="newsletter-fly-out">
+			<iframe src="https://analytics.clickdimensions.com/microsemicom-a46nw/pages/kpnsnn4teeebhwbqvq5jya.html" allowtransparency="true" width="100%" height="500px" type="text/html" frameborder="0" style="border:0"></iframe>
+			</div>
+			</div> -->
+            <script type="text/javascript">
+                jQuery(document).ready(function ($) {
+                    // Add first and last menu item classes
+                    $('ul.first-child li:first-child').addClass('first_item');
+                    $('ul.last-child li:last-child').addClass('last_item');
+                    jQuery('a.doclink').attr('target', '_blank');
+                    $('.maximenuCK2 li .noshow').parent('li').hide();
+                    // Add first and last menu item classes
+                    $('ul.first-child li:first-child').addClass('first_item');
+                    $('ul.last-child li:last-child').addClass('last_item');
+                });
+
+            </script>
+			<!-- Marketo Global Tracking Script -->
+			<!-- RTP tag --> 
+				<script type="text/javascript">
+				(function(c,h,a,f,i,e){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+				 c[a].a=i;c[a].e=e;var g=h.createElement("script");g.async=true;g.type="text/javascript";
+				 g.src=f+'?aid='+i;var b=h.getElementsByTagName("script")[0];b.parentNode.insertBefore(g,b);
+				 })(window,document,"rtp","//sjrtp7-cdn.marketo.com/rtp-api/v1/rtp.js","microchiptechnology");
+				 
+				rtp('send','view');
+				rtp('get', 'campaign',true);
+				</script>
+				<!-- End of RTP tag -->
+				<script type="text/javascript">
+				(function() {
+				  var didInit = false;
+				  function initMunchkin() {
+					if(didInit === false) {
+					  didInit = true;
+					  Munchkin.init('931-UDE-464');
+					}
+				  }
+				  var s = document.createElement('script');
+				  s.type = 'text/javascript';
+				  s.async = true;
+				  s.src = '//munchkin.marketo.net/munchkin.js';
+				  s.onreadystatechange = function() {
+					if (this.readyState == 'complete' || this.readyState == 'loaded') {
+					  initMunchkin();
+					}
+				  };
+				  s.onload = initMunchkin;
+				  document.getElementsByTagName('head')[0].appendChild(s);
+				})();
+				</script>
+			<!-- End of RTP tag -->
+			<!-- Hotjar Tracking Code for http://www.microsemi.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1025829,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+            <!-- page scoring Script For Click Dimentions -->
+        		<script type="text/javascript">
+        			var cdScore = 0;
+        			//alert(cdScore);
+        		</script>
+				<!-- Marketo: Subscribe newsletter -->
+				<div id="subscribe-to-newsletter">
+				<h3>Stay Informed<span id="toggle-icon">✚</span></h3>
+				<div id="newsletter-fly-out">
+				<script src="./Tutorials _ Microsemi_files/forms2.min.js"></script>
+				<form id="mktoForm_2313" novalidate="novalidate" class="mktoForm mktoHasWidth mktoLayoutAbove" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); width: 161px;"><style type="text/css">.mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+color:#fff;
+border:1px solid #75ae4c;
+padding:0.4em 1em;
+font-size:1em;
+background-color:#99c47c;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#99c47c), to(#75ae4c));
+background-image: -webkit-linear-gradient(top, #99c47c, #75ae4c);
+background-image: -moz-linear-gradient(top, #99c47c, #75ae4c);
+background-image: linear-gradient(to bottom, #99c47c, #75ae4c);
+}
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton:hover {
+border:1px solid #447f19;
+}
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton:focus {
+outline:none;
+border:1px solid #447f19;
+}
+.mktoForm .mktoButtonWrap.mktoSimple .mktoButton:active{
+background-color:#75ae4c;
+background-image: -webkit-gradient(linear, left top, left bottom, from(#75ae4c), to(#99c47c));
+background-image: -webkit-linear-gradient(top, #75ae4c, #99c47c);
+background-image: -moz-linear-gradient(top, #75ae4c, #99c47c);
+background-image: linear-gradient(to bottom, #75ae4c, #99c47c);
+}
+</style><div class="mktoFormRow"><div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;"><div class="mktoOffset" style="width: 10px;"></div><div class="mktoFieldWrap mktoRequiredField"><label for="FirstName" id="LblFirstName" class="mktoLabel mktoHasWidth" style="width: 100px;"><div class="mktoAsterix">*</div>First Name:</label><div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><input id="FirstName" name="FirstName" maxlength="255" aria-labelledby="LblFirstName InstructFirstName" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" aria-required="true" style="width: 150px;"><span id="InstructFirstName" tabindex="-1" class="mktoInstruction"></span><div class="mktoClear"></div></div><div class="mktoClear"></div></div><div class="mktoClear"></div></div><div class="mktoFormRow"><div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;"><div class="mktoOffset" style="width: 10px;"></div><div class="mktoFieldWrap mktoRequiredField"><label for="LastName" id="LblLastName" class="mktoLabel mktoHasWidth" style="width: 100px;"><div class="mktoAsterix">*</div>Last Name:</label><div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><input id="LastName" name="LastName" maxlength="255" aria-labelledby="LblLastName InstructLastName" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" aria-required="true" style="width: 150px;"><span id="InstructLastName" tabindex="-1" class="mktoInstruction"></span><div class="mktoClear"></div></div><div class="mktoClear"></div></div><div class="mktoClear"></div></div><div class="mktoFormRow"><div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;"><div class="mktoOffset" style="width: 10px;"></div><div class="mktoFieldWrap mktoRequiredField"><label for="Email" id="LblEmail" class="mktoLabel mktoHasWidth" style="width: 126px;"><div class="mktoAsterix">*</div>Email Address:</label><div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><input id="Email" name="Email" maxlength="255" aria-labelledby="LblEmail InstructEmail" type="email" class="mktoField mktoEmailField mktoHasWidth mktoRequired" aria-required="true" style="width: 150px;"><span id="InstructEmail" tabindex="-1" class="mktoInstruction"></span><div class="mktoClear"></div></div><div class="mktoClear"></div></div><div class="mktoClear"></div></div><div class="mktoFormRow"><div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;"><div class="mktoOffset" style="width: 10px;"></div><div class="mktoFieldWrap"><label for="Country" id="LblCountry" class="mktoLabel mktoHasWidth" style="width: 100px;"><div class="mktoAsterix">*</div>Country:</label><div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><select id="Country" name="Country" aria-labelledby="LblCountry InstructCountry" class="mktoField mktoHasWidth" style="width: 150px;"><option value="">Select...</option><option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cabo Verde">Cabo Verde</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Central African Republic (CAR)">Central African Republic (CAR)</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo, Democratic Republic of the">Congo, Democratic Republic of the</option><option value="Congo, Republic of the">Congo, Republic of the</option><option value="Costa Rica">Costa Rica</option><option value="Cote d&#39;Ivoire">Cote d'Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czechia">Czechia</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Greece">Greece</option><option value="Grenada">Grenada</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Honduras">Honduras</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Kosovo">Kosovo</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="North Korea">North Korea</option><option value="North Macedonia">North Macedonia</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Palestine">Palestine</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Qatar">Qatar</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Korea">South Korea</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates (UAE)">United Arab Emirates (UAE)</option><option value="United Kingdom (UK)">United Kingdom (UK)</option><option value="United States of America (USA)">United States of America (USA)</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select><span id="InstructCountry" tabindex="-1" class="mktoInstruction"></span><div class="mktoClear"></div></div><div class="mktoClear"></div></div><div class="mktoClear"></div></div><div class="mktoFormRow"><input type="hidden" name="honeypot" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;"><div class="mktoClear"></div></div><div class="mktoButtonRow"><span class="mktoButtonWrap mktoSimple" style="margin-left: 11px;"><button type="submit" class="mktoButton">Submit</button></span></div><input type="hidden" name="formid" class="mktoField mktoFieldDescriptor" value="2313"><input type="hidden" name="munchkinId" class="mktoField mktoFieldDescriptor" value="931-UDE-464"></form>
+				<script>MktoForms2.loadForm("//app-sj14.marketo.com", "931-UDE-464", 2313);</script>
+				</div>
+				</div>
+<script>
+  jQuery(document).ready(function(){
+      jQuery('#subscribe-to-newsletter h3').on('click',function(){
+      
+      if (jQuery(this).next("#newsletter-fly-out").is(':visible')) {
+              jQuery(this).next("#newsletter-fly-out").slideUp();
+              jQuery(this).children("#toggle-icon").html("&#10010;");
+          } else {
+              jQuery(this).next("#newsletter-fly-out").slideDown();
+              jQuery(this).children("#toggle-icon").html("&#10006;");
+          }     
+      });
+  });
+  </script>
+    
+
+<div id="btl-content">
+				<!-- Form login -->
+		<div id="btl-content-login" class="btl-content-block" style="">
+			<!-- Public Portal Links -->
+				<div style="padding: 25px 10px 20px 25px;">
+					<h3 style="color:#6D6D6D;border-bottom: 1px dotted #e1e8ed;padding-bottom: 8px;margin-right: 19px;">Registered Users &amp; Partners</h3>
+					<div class="btl-drp-link">
+						<a href="https://my.microsemi.com/" target="_blank">Audio, Voice, and Line Circuits Support Cases</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="http://sds.microsemi.com/software.php" target="_blank">Audio, Voice, and Line Circuits Software</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://www.microsemi.com/log-in/" target="_blank">Audio, Voice, and Line Circuits Documents</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://my.microsemi.com/AWelcome/HomeRNew.aspx" target="_blank">Ethernet Switches, PHYs, Software, Crosspoint Switches &amp; Signal Conditioners Documents</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://soc.microsemi.com/portal" target="_blank">FPGAs &amp; SoCs Documents, Support Cases and Software Licenses</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://my.microsemi.com/" target="_blank">Low Power Radios Software and Support Cases</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://my.microsemi.com/" target="_blank">MyMicrosemi Partner Portal</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://esc.microsemi.com/myPMC" target="_blank">OTN Processors Documents and Software</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://support.microchip.com/" target="_blank">PoE Support Cases</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://www.microsemi.com/company/technology/poe-and-poh-technology" target="_blank">PoE Collateral</a>
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://esc.microsemi.com/myPMC" target="_blank">PON/FTTH - EPON &amp; GPON Documents &amp; Software</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://esc.microsemi.com/myPMC" target="_blank">Storage ICs Documents and Software</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="http://sds.microsemi.com/software.php" target="_blank">Timing ICs Software and Support Cases</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://www.microsemi.com/log-in/" target="_blank">Timing ICs Documents</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="http://my.microsemi.com/" target="_blank">Timing &amp; Synchronization Systems Documents, Software and Support Cases</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+					<div class="btl-drp-link">
+						<a href="https://esc.microsemi.com/myPMC" target="_blank">Winpath Network Processors Documents, Software and Support Cases</a>&nbsp;<img src="./Tutorials _ Microsemi_files/lock-locked.png" border="0">
+					</div>
+				</div>
+			<!-- Public Portal Links -->
+			<div class="clearing"></div>
+		</div>
+
+	
+	</div><div class="cookiepopup-container cookiepopup-container-bottom cookiepopup-color-default" style="display: none; opacity: 0; height: 0px;"><div class="cookiepopup-head"></div><div class="cookiepopup-body">This website uses cookies for analytics, personalization, and other purposes. Click to learn more. By continuing to browse, you agree to our use of cookies as described in our Cookies Statement.</div><div class="cookiepopup-buttons"><a href="https://www.microsemi.com/company/microsemi-cookie-statement" target="_blank" class="cookiepopup-button cookiepopup-button_2">Learn&nbsp;more</a><a href="https://www.microsemi.com/product-directory/fpgas-socs-training/4339-fpga-training-tutorials#" class="cookiepopup-button cookiepopup-button_1">OK</a><div class="clearfix"></div></div><a href="https://www.microsemi.com/product-directory/fpgas-socs-training/4339-fpga-training-tutorials#" class="cookiepopup-closebutton">x</a></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Tutorials _ Microsemi_files/box-ad575b5823df97fc9725e14a57070642.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><div id="mktoStyleLoaded" style="display: none; border-top-color: rgb(18, 52, 86);"></div><form novalidate="novalidate" class="mktoForm mktoHasWidth mktoLayoutAbove" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); visibility: hidden; position: absolute; top: -500px; left: -1000px; width: 1833px;"></form><iframe name="mktoFormsXDIframe0.7728660103541019" id="MktoForms2XDIframe" src="./Tutorials _ Microsemi_files/XDFrame.html" style="display: none;"></iframe></body></html>

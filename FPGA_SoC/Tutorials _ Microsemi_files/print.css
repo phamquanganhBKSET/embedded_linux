@@ -1,0 +1,41 @@
+@charset "utf-8";
+.buttonheading {display:none}
+body.contentpane{font-size:76%;color:#333;font-family:"Lucida Grande", Lucida, Verdana, sans-serif;line-height:1.8em}
+a, 
+a:link, 
+a:visited,
+a:focus,
+a:active{text-decoration:none}
+a:hover{text-decoration:underline}
+b{font-weight:700}
+blockquote{border-left:10px solid #ddd;margin-left:10px}
+code{font-family:"Courier New", Courier, monospace;font-size:1em;white-space:pre}
+div{font-size:1em}
+em{font-style:italic}
+fieldset{font-size:100%}
+form table{font-size:1.1em}
+form{margin:0;padding:0}
+hr{display:none}
+h1{font-size:2em;font-weight:400}
+h2{font-size:1.7em;font-weight:400}
+h3{font-size:1.4em;font-weight:400}
+h4{font-size:1.2em;font-weight:700}
+h5{font-size:1.0em;font-weight:700}
+h6{font-size:0.8em;font-weight:700}
+p,dl,hr,h1,h2,h3,h4,h5,h6,ol,ul,pre,table,address{margin-bottom:1.25empx}
+i{font-style:italic}
+input.button{padding:0 10px}
+li > p{margin:0.2em 0 0 1em}
+ol,ul,li{font-size:1em;margin:0.2em 0 0.1em 0}
+li{margin-left:1.25em}
+p{font-size:1em;line-height:1.8em}
+pre{font-family:monospace;font-size:1em;overflow-x: auto; /* Firefox 2 */ white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */ white-space: -pre-wrap; /* Opera 4-6 */	white-space: -o-pre-wrap; /* Opera 7 */ word-wrap: break-word; /* Internet Explorer 5.5+ */}
+table{font-size:1em;line-height:1.8em;margin:1.5em 0;padding:0;width:100%}
+table caption{font-weight:700;margin:0;padding:0 0 1.5em}
+textarea{font-size:100%;font-family:arial, serif}
+td{font-size:1em;vertical-align:top}
+th{font-weight:700;text-align:left}
+strong{font-weight:700}
+
+.actions{float:right}
+.actions li {float:left;list-style:none}

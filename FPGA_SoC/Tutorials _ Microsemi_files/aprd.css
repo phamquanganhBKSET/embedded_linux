@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+div span.showhide{color: #2E5291!important;
+    font-weight: bold!important; font-size:12px;}
+
+
+div.show-step2{color: #646464 !important;
+    font-weight: normal !important; font-size:10px;}
+	div.show-step2:hover{color: #2E5291!important;}
+	span.level3 a{ font-weight:normal; color: #646464;}
+	span.level3 a:hover{ color:#2E5291;}
+	a.level1, a.level2{ color:#646464;}
+/* Start: Added By Ranjith for new Apps Page 08-09-2015 */
+.apps_intro_txt {margin:10px 12px 7px 0px;}
+.apps_box{width:31%;float:left;margin:10px 12px 7px 0px;}
+.apps_box img {width: 100%;}
+.apps_box_top a {text-decoration:none !important;}
+.apps_box_title_bg { -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: -35px;
+	position: relative;
+	width: 100%;}
+.apps_box_title{
+	color: #fff;
+    display: block;
+    margin: 0;
+    padding: 5px 14px;font-family: arial,Helvetica,san-serif !important;
+    font: normal normal 15px oswald,Tahoma,Helvetica,FreeSans,sans-serif;text-transform: uppercase;}
+.apps_box_bottom a {}
+.apps_box_bottom{padding:5px;}
+.apps_box_bottom_list_left {float:left;width:5%;margin:0 5px;}
+.apps_box_bottom_list_right{float:left;width:90%;}
+.apps_box_bottom_list_left img{width:10px; height:10px;}
+.apps_box_clear{clear:both;height:1px;}
+.appsdiv-0,.appsdiv-1,.appsdiv-2,.appsdiv-3,.appsdiv-4,.appsdiv-5,.appsdiv-6,.appsdiv-7,.appsdiv-8 {min-height: 175px;}
+
+/* End: Added By Ranjith for new Apps Page 08-09-2015 */
