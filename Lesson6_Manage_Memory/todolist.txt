@@ -2,7 +2,7 @@
 - https://www.youtube.com/watch?v=EwaDYDswWKc&pp=sAQA
 - https://www.youtube.com/watch?v=X27o_2BnKDc&pp=sAQA 
 
-+) Tìm hiểu chương "Quản lý bộ nhớ" khoá học "Linux System Programming" + "Linux Kernel Basic".
++) Tìm hiểu chương "Quản lý bộ nhớ" khoá học "Linux System Programming" + "Linux Kernel Basic" (nên đọc lý thuyết ở khóa Linux Kernel Basic và đọc code ở khóa Linux System Programming).
 
 +) Bài tập: Viết một chương trình, tương tự như cp(1), sử dụng các hàm mmap() và memcpy() (thay cho hàm read() hoặc write()) để sao chép file nguồn vào file đích. (Sử dụng fstat() để có được kích thước của file đầu vào, sau đó có thể được sử dụng để xác định kích thước bộ nhớ cần ánh xạ và sử dụng hàm ftruncate() để đặt kích thước của tệp đầu ra.) (bài 49-1 chương 49 sách The Linux System Programming Interface).
 
