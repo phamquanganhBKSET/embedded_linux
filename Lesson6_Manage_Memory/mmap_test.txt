@@ -1,0 +1,2 @@
+It's mmap test file!
+Successfully map!
