@@ -7,5 +7,5 @@
 +) Bài tập:
 1. Viết chương trình mô tả lệnh cat.
  
-2. Viết một chương trình, tương tự như cp(1), sử dụng các hàm mmap() và memcpy() (thay cho hàm read() hoặc write()) để sao chép file nguồn vào file đích. (Sử dụng fstat() để có được kích thước của file đầu vào, sau đó có thể được sử dụng để xác định kích thước bộ nhớ cần ánh xạ và sử dụng hàm ftruncate() để đặt kích thước của tệp đầu ra.) (bài 49-1 chương 49 sách The Linux System Programming Interface).
+2. Viết một chương trình, tương tự như cp(1), sử dụng các hàm mmap() và memcpy() (thay cho hàm read() hoặc write()) để sao chép file nguồn (src.txt) vào file đích (dest.txt). (Sử dụng fstat() để có được kích thước của file đầu vào, sau đó có thể được sử dụng để xác định kích thước bộ nhớ cần ánh xạ và sử dụng hàm ftruncate() để đặt kích thước của tệp đầu ra) (bài 49-1 chương 49 sách The Linux System Programming Interface).
 
