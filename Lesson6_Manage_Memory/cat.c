@@ -40,5 +40,7 @@ int main(void)
         	printf("write to stdout error\n");
    	}
 
+	close(fd);
+
 	return 0;
 }
