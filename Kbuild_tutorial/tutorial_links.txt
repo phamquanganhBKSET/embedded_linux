@@ -1,0 +1,3 @@
+https://www.youtube.com/watch?v=npZKntCmJ4g
+https://events19.linuxfoundation.org/wp-content/uploads/2017/11/A-Dive-into-Kbuild-Cao-Jin-Fujitsu.pdf
+https://www.kernel.org/doc/html/latest/kbuild/kconfig-language.html
